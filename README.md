@@ -2,6 +2,18 @@
 
 ## gag buffs/nerfs
 
+### trap
+
+Does trap need to be balanced? Maybe. If sound is nerfed (see the section on sound), then that might be enough
+
+|            | Banana Peel | Rake        | Marbles     | Quicksand   | Trapdoor    | TNT           | Railroad      |
+| ---------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------- | ------------- |
+| TTR        | 12 (**13**) | 20 (**22**) | 35 (**38**) | 50 (**55**) | 70 (**77**) | 180 (**198**) | 195 (**214**) |
+| &delta;TTR |             | +8          | +15         | +15         | +20         | +110          | +15           |
+
+12 20 36 60 92 156 188
+   8  16 24 32 64  32
+
 ### lure
 
 Format:
@@ -55,10 +67,6 @@ it is perhaps unfortunate that making organic lure last for more rounds
 isn&rsquo;t really viable and so D relies on making inorganic lure *more
 fickle*), but all is not lost for inorganic lure users so long as their friends
 stun dilligently enough to reach an acceptable(!) rate of success.
-
-#### why is lure kind of broken no matter how much you nerf and/or buff it?
-
-
 
 ### sound
 
@@ -191,3 +199,163 @@ the left). The magic number here is thus 145, because it is exactly when
   could be a con.
 * Allowing accuracy to possibly reach 100% could be seen as overly rigid or
   deterministic(&#x203d;)
+
+## appendix (a.k.a. random garbage)
+
+### why is lure kind of broken no matter how much you nerf and/or buff it?
+
+**WARNING: this section contains a larger-than-usual dose of personal opinion.
+Caveat lector.**
+
+There is a part of lure gags as a mechanic that will always be a *little bit*
+broken regardless of how you tweak the parameters. By parameters I mean the
+number of rounds that various lure gags (organic, and inorganic) last,
+`propAcc` for various lure gags (organic, and inorganic), and how many cogs
+that various lure gags (organic, and inorganic) target (1, up to 2, up to 3, or
+just however many cogs are unlured at the time).
+
+Imagine, as a simple example, that you have a party with an even spread of
+lureless toons and lure toons: 2 of each. The party is fighting a row of level
+&ge;10 cogs, and they decide to lure all the cogs (with Hypno, let&rsquo;s
+say). In TTR, they can probably continue fighting just using lure (and some
+assortment of trap, throw, squirt, and maybe some drop) even if more cogs join
+the battle (like in one of the boss battles). When tweaking the parameters of
+lure gags to balance this, there are *broadly* two scenarios that come up:
+
+Scenario 1: you, in some way, nerf the accuracy of lure in an attempt to
+balance it. This has the very clear and unfortunate disadvantage that this
+makes the game (particularly lure, of course) even more reliant on dumb luck.
+Generally, you **(a)** get lucky and have the lures mostly work and arrive back
+at what looks like TTR lure-based gameplay, **(b)** put a lot of effort into
+stunning in order to make the accuracy hover around 85~95% again and thus
+arrive back at what still looks like TTR lure-based gameplay (but with more
+stunning, which doesn&rsquo;t matter too much considering how long the lure
+gags&rsquo; effects last), or **(c)** you don&rsquo;t stun well enough and/or
+don&rsquo;t get particularly lucky and thus (seemingly inexplicably) keep
+face-tanking cog hits while performing an unusual number of lureless kills
+(viz. unusual for a lure-based context). In addition to the aforementioned
+disadvantage of making things more reliant on dumb luck in many cases, none of
+these 3 outcomes seem particularly appealing; none of them actually seem to
+&ldquo;balance&rdquo; lure.
+
+An additional thing to note is that in outcome **(c)**, the &ldquo;lureless
+kills&rdquo; in question are not as desirable as they might sound at first:
+because they are effectively &ldquo;accidental&rdquo; in some sense (because
+they are the result of dumb luck making lure gags miss), they don&rsquo;t look
+like actual lureless play, and generally take one of two forms: **(c0)** some
+gag(s) are used on a cog as it is lured, but the lure misses and so the gag(s)
+do not kill the cog; the cog is killed at some point, but it takes more rounds
+than expected, or **(c1)** the gag strategy chosen is a so-called
+&ldquo;insurance strategy&rdquo;, and so the cog dies in one round regardless
+or whether or not lure hits (assuming the other gag(s) hit). In particular,
+**(c0)** is obviously not what anyone really wants from (quasi-)lureless play,
+and **(c1)** is nicer but makes especially clear the problem of lure being
+entirely dumb luck; you hope that the lure hits, but don&rsquo;t (read: cannot)
+expect it to, and when does hit, it just acts as a way of saving some
+resources. But making this lure&rsquo;s niche as a gag track is *probably* a
+recipe of making lure unappealing in general and thus unbalanced. Also, the
+fact remains that you can never rely on lure for anything *remotely* critical
+in either **(c0)** or **(c1)**.
+
+Scenario 2: you, in some way, nerf the duration of lure gags in general in an
+attempt to balance the gag track. At first, this seems nicer than Scenario 1,
+since it doesn&rsquo;t make lure any more fickle than it has to be. But there
+is a sneakier, more subtle reason as to why this scenario is still &ldquo;kind
+of broken&rdquo;, regardless of whether or not it is combined with Scenario 1.
+The reason that I use the phrase &ldquo;kind of broken&rdquo; is because it
+depends on your perspective as to whether this is a real problem, a minor
+problem, or a complete non-issue.
+
+To illustrate, imagine a simple example where Hypno is a gag that works
+identically to how it does in TTR, with the exception that it lasts for just 1
+round (rather than 4). Choosing 1 round in particular is *somewhat* arbitrary
+(2 rounds *could* be a possibility as well), but much more than 1 round, and
+you aren&rsquo;t really nerfing it, and 1 round is the simplest to work with
+anyways. When one toon chooses Hypno, the 3 other toons have the opportunity to
+pick other non-lure gags; in many cases this will be somewhere between 0 and 2
+toonup gags and the rest being attack gags like trap, throw, and squirt.
+Assume, for simplicity, that the lure hits. The attack gag(s) are used, and
+some cog(s) still remain both alive and lured. The damage that said cogs would
+otherwise do immediately after the toons finished using their attack gag(s) is
+prevented because they are lured; this is part of the point of using lure in
+the first place. If no new cogs join between the time of the attack gag(s)
+being used and the next time that the toons get to make gag choices, *and* all
+of the remaining (lured) cogs can be taken out with just the gags that are
+chosen in that very next round, then great. The cogs are defeated, and the
+toons never had to deal with any pesky cogs becoming unlured. But in the case
+that these two conditions are not *both* met, some cog(s) will automatically be
+unlured after the toons use their attack gags for the second time (or they do
+actually get defeated, and it is not until the stream of incoming cogs starts
+to overwhelm the toons&rsquo; resources &amp; luck that this automatic unluring
+occurs; either way, it happens).
+
+While this seems fine and dandy &mdash; after all, this is basically the point
+of nerfing lure gag durations &mdash; the problem comes from the awkward
+ordering in which things occur when a cog is automatically unlured. When the
+cog(s) automatically unlure after the toons have used their gags, the
+*immediate* next thing that happens is that the automatically unlured cog(s)
+attack the toons. In the context of TTR, this makes a great deal of sense:
+unluring a cog can make sense for various reasons (including killing it
+outright), but allowing a cog&rsquo;s lured-state duration to elapse and thus
+*automatically* get unlured is basically *always a mistake*, and thus gets
+swiftly punished. When nerfing (and rightly so, I might add) lure via what is
+here called Scenario 2 (or any combination of Scenarios 1 and 2), this makes
+considerably less sense, for two related reasons: **(a)** swiftly punishing
+toons for allowing lure to expire seems to make less sense when the lure is
+*designed* to expire quickly, and **(b)** this mechanic (so far as I can tell)
+seems to inherently make it more difficult to reconcile lure-based play and
+lureless play; despite the fact that the cogs get automatically unlured, there
+is little chance for toons to plan ahead and take advantage of their knowledge
+of when cogs will automatically unlure, because the cog will take a whiff at
+them anyways before the next round comes and they have the chance to re-lure
+the cog anyways.
+
+To give a (very) simple example that hopefully makes **(b)** more clear,
+imagine a lured level 11 cog that is going to get unlured as soon as the next
+round of toon attacks ends. In anticipation of it getting unlured, I might use
+a Piano gag on it (Piano, just because it does enough damage to one-shot a
+level 11 v1.0 cog). But if I *actually* did that, the Piano would just miss
+(since the cog is lured and drop gags have a fixed 0% accuracy on lured cogs),
+and then the cog would immediately unlure and attack me. Again, depending on
+your perspective, this may or may not seem wonky in a bad way.
+
+There are, of course, some reassurances that can be afforded to both **(a)**
+and **(b)**, which I will address here. One could reframe **(a)** as not being
+a swift punishment for allowing a cog&rsquo;s lured-state to expire, but rather
+an occasional punishment that is inherent to using lure gags at all; that is,
+it is just part of lure itself that you have to be wise to only use lure when
+you know that you can face-tank the requisite number of cog attacks (or have a
+way to dispose of the cogs swiftly enough to avoid said face-tanking). As a
+rationale, I think that this is actually fine and good, but I would note that
+this attitude *could possibly* have the effect of balancing lure too much into
+the realm of &ldquo;only marginal usefulness&rdquo;. For **(b)**, as far as I
+can tell, there are two (not mutually exclusive) ways of assuaging its concern:
+you can either not care and be fine with this kind of friction between
+lure-based play and lureless play, or you can insist that sound gags
+&ldquo;solving&rdquo; the problem in certain edge cases is sufficient to make
+things work.
+
+When I say that sound gags &ldquo;solve&rdquo; the problem in certain edge
+cases, I basically just mean that the use of drop gags can be afforded on
+certain cogs that are about to be automatically unlured, with the use of one or
+more sound gag(s). Of course, this has two problems: one is that this only
+actually makes sense in cases where the cogs not being dropped on have low
+enough HP (either from being low level, or from being hit in some previous
+round(s)) to all (or at the least, all except one) die to the sound gag(s). If
+this condition isn&rsquo;t met, then it is almost certainly better to do
+something else (probably just aggressively luring). The other problem is that
+what is *really* going on here is a shortening of the lure gag&rsquo;s effect
+duration by 1 round via the use of sound gag(s). Yes, this technically allows
+you to take shots at the cog(s) before they get their free attack(s) on you
+(viz. the attack(s) that they get for being automatically unlured), but part of
+the price that you pay is that you effectively shorten by &frac12; the number
+of rounds that the lure gag&rsquo;s effects last. The effective shortening is
+because sound gags have low damage-per-(lured-)cog, come before all the other
+gag tracks that can be used to attempt to damage lured cogs (viz. throw,
+squirt, &amp; drop), *and* get no bonus damage (read: orange damage) on lured
+cogs. The sound thus effectively acts as a low-damage wakeup. The side-effect
+of effectively shortening lure effect durations by &frac12; rounds is somewhat
+troubling when we are generally talking about lure gags whose effects last for
+around 1 round each. So, again, the coexistence of lure-based play and lureless
+play still has the same friction and the problem doesn&rsquo;t really seem to
+be solved (excepting perhaps some edge cases).
