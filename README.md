@@ -3,6 +3,7 @@
 <!-- TOC depthFrom:2 -->
 
 - [general attitude/philosophy (prelude)](#general-attitudephilosophy-prelude)
+    - [what about other (non-TTR) servers, though?](#what-about-other-non-ttr-servers-though)
 - [gag buffs/nerfs](#gag-buffsnerfs)
     - [trap](#trap)
     - [lure](#lure)
@@ -20,6 +21,54 @@
 <!-- /TOC -->
 
 ## general attitude/philosophy (prelude)
+
+TTO/TTR (henceforth TTR, because TTO no longer exists) is an excellent game,
+but suffers (as so many games do) from some design decisions that unfortunately
+were not quite prescient enough to see into the far future. There are issues of
+balance: between gag tracks, between cogs and toons, &amp;c. There are issues
+of overly restrictive gameplay, and gameplay not adapted to the ways that
+players have shaped it. It has historically been generally wise to adapt games
+to the ways that players have intentionally adjusted them for the purpose of
+fun. This document catalogues some very concrete proposed changes that
+typically err on the side of only that which is needed to improve the game,
+rather than change the game unnecessarily or add to it. See my open letter,
+[&ldquo;On sellbot field offices (SBFOs), especially concerning the problem of
+&lsquo;difficulty&rsquo; in
+Toontown&rdquo;](https://gist.github.com/JonathanHelianthicusDoe/e5a261941bfa0f29148a6999b6ca7a65)
+if you are interested in more abstract considerations of the kind mentioned in
+this paragraph.
+
+Some of the changes proposed here are meant to be combined with other such
+changes, but some may be designed *without* other changes in mind, for the sake
+of independence and flexibility.
+
+While the changes made here are obviously, first and foremost, changes made to
+balance the game and make it more fun, there are also some aesthetic
+considerations to fill in the gaps. Mostly, this comes in the form of what
+numbers are chosen in cases where numeric values are being balanced. The
+tendency is to favor numbers that are more &ldquo;round&rdquo; (read:
+[regular](https://en.wikipedia.org/wiki/Regular_number), or its synonym,
+5-[smooth](https://en.wikipedia.org/wiki/Smooth_number)), and to favor
+[sequences](https://en.wikipedia.org/wiki/Sequence) and mathematical
+[functions](https://en.wikipedia.org/wiki/Function_(mathematics)) that are more
+[&ldquo;beautiful&rdquo;](https://en.wikipedia.org/wiki/Mathematical_beauty).
+In this document, heeding these aesthetic concerns is referred to as
+&ldquo;rationalization&rdquo; (both in the mathematical sense, from
+&ldquo;ratio&rdquo;, and the usual sense of &ldquo;to give a rationale&rdquo;).
+Again, these concerns are always strictly secondary to the more important
+concerns of game balance and fun.
+
+### what about other (non-TTR) servers, though?
+
+Other servers besides TTR exist, but are often dedicated to &ldquo;adding
+to&rdquo; the base game and/or &ldquo;modernizing&rdquo; it. While these are
+certainly noble goals, they often amount to addition for the sake of addition
+(e.g. entirely new cog types, entirely new gag tracks, &amp;c.) and revisionism
+for the same of revisionism (a kind of pathological uniqueness). This document
+instead focuses on TTR-as-essentially-TTO, that is, the &ldquo;base game&rdquo;
+in more or less the same state gameplay-wise as TTO in 2013. This acts as a
+starting point, or even <i>tabula rasa</i> (a <i>tabula rasa</i> that, like a
+newborn human mind, is not really a &ldquo;blank&rdquo; slate at all&hellip;).
 
 ## gag buffs/nerfs
 
@@ -207,10 +256,10 @@ difference in TTR in *one* situation: using throw gag(s) on an unlured level
 &ge;10 cog, with no stun, while at least one other cog is lured. This is
 unfortunate, because:
 
-* This is a very niche use-case that doesn&rsquo;t need to be serviced,
+- This is a very niche use-case that doesn&rsquo;t need to be serviced,
   especially considering that even a single stun will negate the usefulness of
   `luredRatio`.
-* Having a mechanic like `luredRatio` unnecessarily complicates accuracy
+- Having a mechanic like `luredRatio` unnecessarily complicates accuracy
   calculation.
 
 The proposal is to get rid of `luredRatio` wholesale, and collapse `bonus` and
@@ -218,7 +267,7 @@ The proposal is to get rid of `luredRatio` wholesale, and collapse `bonus` and
 
 #### Pros
 
-* Simplifies accuracy calculation.
+- Simplifies accuracy calculation.
 
 #### Cons
 
@@ -274,20 +323,20 @@ the left). The magic number here is thus 145, because it is exactly when
 
 #### Pros
 
-* Makes accuracy more meaningful in general, because its value changes more
+- Makes accuracy more meaningful in general, because its value changes more
   freely to reflect the strategy being used.
-* Particularly, makes stunning more meaningful because it creates a nonzero
+- Particularly, makes stunning more meaningful because it creates a nonzero
   benefit in many more cases.
-* Makes the game less reliant on dumb luck by allowing accuracy to be pushed
+- Makes the game less reliant on dumb luck by allowing accuracy to be pushed
   beyond the 95% mark (with the right gag picks), even up to 100%.
 
 #### Cons
 
-* Complicates accuracy calculation.
-* This change would raise the overall power level of toons, since in some cases
+- Complicates accuracy calculation.
+- This change would raise the overall power level of toons, since in some cases
   it improves accuracy, and in all other cases it keeps accuracy the same. This
   could be a con.
-* Allowing accuracy to possibly reach 100% could be seen as overly rigid or
+- Allowing accuracy to possibly reach 100% could be seen as overly rigid or
   deterministic(&#x203d;)
 
 ## appendix (a.k.a. random garbage)
