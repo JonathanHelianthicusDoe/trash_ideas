@@ -1,18 +1,108 @@
 # garbage/useless tt ideas
 
+<!-- TOC depthFrom:2 -->
+
+- [general attitude/philosophy (prelude)](#general-attitudephilosophy-prelude)
+- [gag buffs/nerfs](#gag-buffsnerfs)
+    - [trap](#trap)
+    - [lure](#lure)
+    - [sound](#sound)
+- [accuracy](#accuracy)
+    - [`luredRatio`](#luredratio)
+        - [Pros](#pros)
+        - [Cons](#cons)
+    - [`atkAcc` clamping](#atkacc-clamping)
+        - [Pros](#pros-1)
+        - [Cons](#cons-1)
+- [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
+    - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
+
+<!-- /TOC -->
+
+## general attitude/philosophy (prelude)
+
 ## gag buffs/nerfs
 
 ### trap
 
-Does trap need to be balanced? Maybe. If sound is nerfed (see the section on sound), then that might be enough
+Does trap need to undergo some kind of balancing of its own? Maybe. If sound is
+nerfed (see the section on sound), then that might be enough to incidentally
+make trap balanced; the fact remains that without *any* balancing efforts
+(read: TTR), trap remains the least popular gag (at least amongst 6-trackers).
+Notice that this doesn&rsquo;t *necessarily* imply that trap is underpowered
+(and thus unbalanced); perhaps people just routinely underestimate the utility
+of a guaranteed stun for lure, and/or fail to imagine sufficiently clever ways
+of using trap gags in combination with other gags to kill cogs. Also note that,
+besides nerfing sound (and thus making lure more of an option&hellip; putting
+aside lure nerfs) making trap more appealing, it also makes sense to consider
+accuracy changes: see the section on `atkAcc` clamping that explains how stuns
+(and thus trap) would be more useful with a different method of clamping
+`atkAcc`.
 
-|            | Banana Peel | Rake        | Marbles     | Quicksand   | Trapdoor    | TNT           | Railroad      |
-| ---------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------- | ------------- |
-| TTR        | 12 (**13**) | 20 (**22**) | 35 (**38**) | 50 (**55**) | 70 (**77**) | 180 (**198**) | 195 (**214**) |
-| &delta;TTR |             | +8          | +15         | +15         | +20         | +110          | +15           |
+Nevertheless, it&rsquo;s at least worth exploring a few conservative balancing
+options.
 
-12 20 36 60 92 156 188
-   8  16 24 32 64  32
+|            | Banana Peel | Rake        | Marbles     | Quicksand   | Trapdoor     | TNT           | Railroad      |
+| ---------- | ----------- | ----------- | ----------- | ----------- | ------------ | ------------- | ------------- |
+| TTR        | 12 (**13**) | 20 (**22**) | 35 (**38**) | 50 (**55**) | 70 (**77**)  | 180 (**198**) | 195 (**214**) |
+| &delta;TTR |             | +8          | +15         | +15         | +20          | +110          | +15           |
+| A          | 12 (**13**) | 20 (**22**) | 36 (**39**) | 60 (**66**) | 92 (**101**) | 156 (**171**) | 188 (**206**) |
+| &delta;A   |             | +8          | +16         | +24         | +32          | +64           | +32           |
+| B          | 12 (**13**) | 20 (**22**) | 36 (**39**) | 60 (**66**) | 92 (**101**) | 180 (**198**) | 196 (**215**) |
+| &delta;B   |             | +8          | +16         | +24         | +32          | +88           | +16           |
+| C          | 12 (**13**) | 20 (**22**) | 35 (**38**) | 56 (**61**) | 82 (**90**)  | 172 (**189**) | 198 (**217**) |
+| &delta;C   |             | +8          | +15         | +21         | +26          | +90           | +26           |
+| D          | 19 (**20**) | 28 (**30**) | 39 (**42**) | 51 (**56**) | 82 (**90**)  | 172 (**189**) | 183 (**201**) |
+| &delta;D   |             | +9          | +11         | +12         | +31          | +90           | +11           |
+
+|     | level 5 cog                    | level 6 cog                     | level 7 cog                                       | level 8 cog                                           | level 9 cog                | level 10 cog                                                                                         | level 11 cog                                                                               | level 12 cog                                                                      |
+| --- | ------------------------------ | ------------------------------- | ------------------------------------------------- | ----------------------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| TTR | 1 Quicksand                    | 1 Trapdoor                      | 1 TNT<br />**1 Trapdoor**                         | 1 TNT                                                 | 1 TNT                      | 1 TNT                                                                                                | 1 TNT                                                                                      | **1 Railroad**                                                                    |
+|     | "                              | "                               | 1 Quicksand &amp; 1 Fruit Pie<br />**1 Trapdoor** | 1 Trapdoor &amp; 1 Seltzer                            | 1 Trapdoor &amp; 1 Cream   | **1 Trapdoor** &amp; 1 Safe<br />1 Trapdoor &amp; **1 Safe**                                         | **1 Trapdoor** &amp; 1 Storm<br />1 Trapdoor &amp; **1 Storm**                             | 1 TNT &amp; 1 Seltzer                                                             |
+| A   | 1 Quicksand                    | 1 Quicksand                     | 1 Trapdoor                                        | 1 Trapdoor                                            | 1 TNT                      | 1 TNT                                                                                                | 1 TNT                                                                                      | **1 Railroad**                                                                    |
+|     | "                              | "                               | "                                                 | "                                                     | 1 Trapdoor &amp; 1 Seltzer | 1 Trapdoor &amp; 1 Cream                                                                             | 1 Trapdoor &amp; 1 Storm<br />**1 Trapdoor** &amp; 1 Safe<br />1 Trapdoor &amp; **1 Safe** | 1 TNT &amp; 1 Big Weight<br />**1 TNT** &amp; 1 Hose<br />1 TNT &amp; **1 Cream** |
+| B   | 1 Quicksand                    | 1 Quicksand                     | 1 Trapdoor                                        | 1 Trapdoor                                            | 1 TNT                      | 1 TNT                                                                                                | 1 TNT                                                                                      | **1 Railroad**                                                                    |
+|     | "                              | "                               | "                                                 | "                                                     | 1 Trapdoor &amp; 1 Seltzer | 1 Trapdoor &amp; 1 Cream                                                                             | 1 Trapdoor &amp; 1 Storm<br />**1 Trapdoor** &amp; 1 Safe<br />1 Trapdoor &amp; **1 Safe** | 1 TNT &amp; 1 Seltzer                                                             |
+| C   | 1 Quicksand                    | 1 Quicksand                     | 1 Trapdoor                                        | 1 TNT<br />**1 Trapdoor**                             | 1 TNT                      | 1 TNT                                                                                                | 1 TNT                                                                                      | **1 Railroad**                                                                    |
+|     | "                              | "                               | "                                                 | 1 Trapdoor &amp; 1 Glass Of Water<br />**1 Trapdoor** | 1 Trapdoor &amp; 1 Hose    | 1 Trapdoor &amp; 1 Safe<br />**1 Trapdoor** &amp; 1 Big Weight<br />**1 Trapdoor** &amp; **1 Cream** | 1 Trapdoor &amp; 1 Storm<br />**1 Trapdoor** &amp; **1 Safe**                              | 1 TNT &amp; 1 Hose                                                                |
+| D   | 1 Quicksand<br />**1 Marbles** | 1 Trapdoor<br />**1 Quicksand** | 1 Trapdoor                                        | 1 TNT<br />**1 Trapdoor**                             | 1 TNT                      | 1 TNT                                                                                                | 1 TNT                                                                                      | **1 Railroad**                                                                    |
+|     | "                              | "                               | "                                                 | 1 Trapdoor &amp; 1 Glass Of Water<br />**1 Trapdoor** | 1 Trapdoor &amp; 1 Hose    | 1 Trapdoor &amp; 1 Safe<br />**1 Trapdoor** &amp; 1 Big Weight<br />**1 Trapdoor** &amp; **1 Cream** | 1 Trapdoor &amp; 1 Storm<br />**1 Trapdoor** &amp; **1 Safe**                              | 1 TNT &amp; 1 Seltzer                                                             |
+
+A is a sort of &ldquo;rationalization&rdquo; of TTR, so that the deltas mostly
+go up by 8 each time, and otherwise are powers of 2. This has the effect of
+making Marbles, Quicksand, and especially Trapdoor considerably more powerful,
+but TNT considerably weaker (although still just enough to one-shot a level 11
+v1.0 cog). Compared to TTR this actually seems to lower the use for organic
+trap by a bit, although having a 171-damage TNT instead of 156 actually is
+quite a bit better than going from 180 to 198 damage. Still, having to use a
+Big Weight on a level 12 cog that is being TNT&rsquo;d is not really so bad
+considering that the Big Weight has two stuns counting towards its accuracy,
+and it&rsquo;s only a level 4 gag.
+
+B is just A but adjusted to have the same TNT damage as TTR. This may look fine
+for balancing trap but doesn&rsquo;t look quite so good for balancing organic
+trap.
+
+C is similar to A in that it makes Quicksand and Trapdoor considerably
+stronger, but nerfs TNT a bit, and also in that it is a sort of
+&ldquo;rationalization&rdquo; of TTR: the deltas make use of the sequence
+\[(0,&nbsp;)8, 15, 21, 26\], which follows the recurrence relation
+*a*<sub>*n*</sub>&nbsp;=&nbsp;2*a*<sub>*n*-1</sub>&nbsp;-&nbsp;*a*<sub>*n*-2</sub>&nbsp;-&nbsp;1.
+This is, in some sense, the opposite of the method used in the sound section,
+where the deltas have a slope of +1 (rather than -1 as they do here).
+
+D is similar to C but without the &ldquo;rationalization&rdquo;; the only
+important changes are to the damage of level &le;4 trap gags. Rather than
+choosing nice damage numbers or deltas, the damage figures are increased just
+enough to make it so that organic versions of the gags are able to one-shot a
+cog that is one higher level. In my opinion, if trap were to be balanced, this
+is probably the way to do it. The numbers are not as nice, but the effect is to
+make both inorganic and organic trap more useful at all stages of the game. In
+any case, the deltas still have the interesting(?) property that they alternate
+between being prime and composite, and this pattern is maintained even if you
+introduce a fictional &ldquo;level 0&rdquo; trap gag that does 0 damage. The
+damage for Railroad is chosen by selecting a delta value that has already been
+used (viz. +11).
 
 ### lure
 
