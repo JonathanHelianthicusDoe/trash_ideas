@@ -23,6 +23,11 @@
     - [`atkAcc` clamping](#atkacc-clamping)
         - [pros](#pros-2)
         - [cons](#cons-2)
+- [facilities](#facilities)
+    - [barriers to entry](#barriers-to-entry)
+    - [gag retention](#gag-retention)
+- [cogs](#cogs)
+- [toontasks](#toontasks)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
 
@@ -617,6 +622,29 @@ the left). The magic number here is thus 145, because it is exactly when
   could be a con.
 - Allowing accuracy to possibly reach 100% could be seen as overly rigid or
   deterministic(&#x203d;)
+
+## facilities
+
+This section deals with &ldquo;facilities&rdquo;, which is a term here
+construed broadly to refer to factories (and the corresponding factory-like
+facilities in the other three cog HQs) and bosses (all four in all four cog
+HQs). Note that this does not, however, include cog buildings.
+
+### barriers to entry
+
+<!-- ... -->
+
+### gag retention
+
+<!-- ... -->
+
+## cogs
+
+<!-- ... -->
+
+## toontasks
+
+<!-- ... -->
 
 ## appendix (a.k.a. random garbage)
 
