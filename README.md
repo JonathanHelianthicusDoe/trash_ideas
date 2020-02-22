@@ -5,12 +5,16 @@
 - [general attitude/philosophy (prelude)](#general-attitudephilosophy-prelude)
     - [what about other (non-TTR) servers, though?](#what-about-other-non-ttr-servers-though)
 - [gag buffs/nerfs](#gag-buffsnerfs)
+    - [toonup](#toonup)
+        - [organic toonup](#organic-toonup)
+        - [Bamboo Cane](#bamboo-cane)
+        - [balancing](#balancing)
     - [trap](#trap)
     - [lure](#lure)
         - [balancing numerically](#balancing-numerically)
         - [balancing mechanically](#balancing-mechanically)
-        - [pros](#pros)
-        - [cons](#cons)
+            - [pros](#pros)
+            - [cons](#cons)
     - [sound](#sound)
 - [accuracy](#accuracy)
     - [`luredRatio`](#luredratio)
@@ -76,6 +80,146 @@ newborn human mind, is not really a &ldquo;blank&rdquo; slate at all&hellip;).
 
 ## gag buffs/nerfs
 
+### toonup
+
+Balancing toonup gags is a bit of a different beast than balancing any of the
+other six tracks; rather than balancing the tracks against themselves, toonup
+is fundamentally different and can only be balanced from a perspective that
+includes not just the HP of cogs, but also the attacking power of cogs and the
+cog-elimating powers of the other six gag tracks.
+
+In TTR, toonup is very much overpowered, because lure and sound are powerful
+enough to make laff loss a relatively rare event. Whenever toonup is eventually
+used, it does the job with just 1 or 2 gags. With nerfs to lure and sound
+making cogs *generally* (buffs to trap notwithstanding) more difficult to
+defeat, this effect should be counteracted a bit and thus make toonup not so
+overpowered.
+
+That being said, there are still two outstanding problems with toonup:
+
+- Organic toonup is still probably underpowered even after nerfing lure and
+  sound.
+- Bamboo Cane does worryingly little damage compared to the other toonup gags.
+
+#### organic toonup
+
+It&rsquo;s well-known that in TTR, organic toonup is incredibly underpowered.
+It is, by far, the least powerful out of the seven possible tracks that can be
+made organic. Partly, this is due to toonup just being overpowered; since each
+toonup gag already does so much healing, adding just a tad extra is not going
+to be useful or even noticable. As a result, nerfing lure and sound, and thus
+making toonup less overpowered (relatively), already ameliorates the problem of
+organic toonup.
+
+But there is another reason why organic toonup is so underpowered, and it has
+to do with the fact that toonup is fundamentally different from the other six
+gag tracks. With other gag tracks (particularly trap, sound, throw, squirt, and
+drop), very slight differences in a gag&rsquo;s damage can make the difference
+between a cog not dying and a cog dying, simply because a cog with 1 HP is
+alive and one with 0 HP is not. Strictly speaking, a similar principle does
+apply to toonup: very slight differences in healing amounts can make the
+difference between a toon being fully healed and a toon not being fully healed,
+simply because a toon with 1 laff fewer than their max laff is not fully
+healed, and a toon with laff equal to their max laff is. But the difference
+between a toon with laff 1 fewer than their maximum and a cog with 1 HP is very
+stark. Getting a toon to the point of having 1 laff missing is &ldquo;good
+enough&rdquo;; it is not the same, but is nevertheless nearly indistinguishible
+from, having full laff. But a cog with 1 HP is *not* &ldquo;good enough&rdquo;;
+that cog still occupies a space in battle and can attack the toons at will,
+very unlike one with 0 HP.
+
+This fundamental difference is not something to get rid of. It is just an
+inherent part of toonup affecting *toons* rather than cogs (unlike the other
+six gag tracks). Rather than trying to smooth over this fundamental difference,
+the best thing to do is to treat it like it is rather than trying to make
+organic toonup *look like* organic versions of other gag tracks. Making organic
+toonup gags do (roughly) 10% more healing than their inorganic counterparts is
+appealing because of its perceived consistency; but as is explained here, this
+consistency is only perceived, not actual.
+
+#### Bamboo Cane
+
+In TTR, the Bamboo Cane gag just intuitively feels a bit underwhelming compared
+to the other six toonup gags. But is that feeling justified? Here are a few
+quantitative ways of looking at this question.
+
+How much healing does the Bamboo Cane do in proportion to the other
+multi-target toonup gags (not including the level 7 gag)? The Bamboo Cane does
+45/18&nbsp;=&nbsp;2.5 times more than the Megaphone, but the Juggling Balls do
+120/45&nbsp;=&nbsp;2.666&hellip; times more than the Bamboo Cane. From this
+perspective, the Bamboo Cane is slightly underpowered.
+
+How much single-target healing does the Bamboo Cane do compared to its
+corresponding single-target toonup gag? The Megaphone does 6/10&nbsp;=&nbsp;0.6
+times as much healing as the Feather. The Juggling Balls do
+40/70&nbsp;=&nbsp;0.571428&hellip; times as much healing as the Pixie Dust. The
+Bamboo Cane does 15/30&nbsp;=&nbsp;0.5 times as much healing as the Lipstick.
+From this perspective, the Bamboo Cane is underpowered.
+
+How does the Bamboo Cane&rsquo;s healing amount look in the context of
+toonup-gag-healing-amount-growth as a function of gag level?
+
+|                   | Feather | Megaphone | Lipstick | Bamboo Cane | Pixie Dust | Juggling Balls | High Dive |
+| ----------------- | ------- | --------- | -------- | ----------- | ---------- | -------------- | --------- |
+| TTR               | 10      | 18        | 30       | 45          | 70         | 120            | 210       |
+| &delta;TTR        |         | +8        | +12      | +15         | +25        | +50            | +90       |
+| &delta;&delta;TTR |         |           | +4       | +3          | +10        | +25            | +40       |
+
+As can be seen from the &delta;&delta;TTR row, the Bamboo Cane is the only
+toonup gag where the toonup-gag-healing-amount-growth takes a noticable
+&ldquo;dip&rdquo; or &ldquo;decline&rdquo; (in particular, note the dip from +4
+down to +3). From this perspective, the Bamboo Cane is underpowered.
+
+So it seems that the feeling that the Bamboo Cane gag is a bit underwhelming
+*is* actually justified. What, then, should be the healing amount of the Bamboo
+Cane? The most obvious choice is 48, since it&rsquo;s the next multiple of 3
+after 45. 48 actually has the advantage over 45 that it is also divisible by 2
+(that is, it&rsquo;s divisible by 6). Divisibility by 6 is particularly nice
+for the healing amounts of multi-target toonup gags because, when using a
+toonup gag, you are always healing either 1, 2, or 3 toons (since you cannot
+toonup yourself). The integers that are divisible by all three of those numbers
+are just those integers that are divisible by 6.
+
+With the Bamboo Cane doing 48 laff of healing, it does
+48/18&nbsp;=&nbsp;2.666&hellip; times more than the Megaphone, and the Juggling
+Balls do 120/48&nbsp;=&nbsp;2.5 times more than the Bamboo Cane. So they have
+been swapped in this respect and are as balanced as before (but now the
+Juggling Balls are the ones that look slightly underpowered). The Bamboo Cane
+would do 16/30&nbsp;=&nbsp;0.5333&hellip; times as much healing as the
+Lipstick. This is still less than both 0.6 and 0.571428&hellip;, but still an
+improvement. And the toonup gag healing amount table would look like this:
+
+|                   | Feather | Megaphone | Lipstick | Bamboo Cane | Pixie Dust | Juggling Balls | High Dive |
+| ----------------- | ------- | --------- | -------- | ----------- | ---------- | -------------- | --------- |
+| TTR               | 10      | 18        | 30       | 48          | 70         | 120            | 210       |
+| &delta;TTR        |         | +8        | +12      | +18         | +22        | +50            | +90       |
+| &delta;&delta;TTR |         |           | +4       | +6          | +4         | +28            | +40       |
+
+There is no longer a &ldquo;dip&rdquo; where the Bamboo Cane is, although it
+seems that the dip has just moved up by 1 gag level. While this is possibly
+unfortunate, it really shouldn&rsquo;t matter, since the Pixie Dust is a
+single-target toonup gag; 70 points of healing is a lot for a single toon.
+However, it should be noted that bumping Pixie Dust up from 70 to 75 solves
+this problem (if it is a problem), and also makes Juggling Balls do
+40/75&nbsp;=&nbsp;0.5333&hellip; times as much single-target healing as the
+Pixie Dust, which is exactly on par with Bamboo Cane doing
+16/30&nbsp;=&nbsp;0.5333&hellip; times as much single-target healing as
+Lipstick.
+
+#### balancing
+
+Format:
+
+healing (**organic healing**); `propAcc` (**organic `propAcc`**)
+
+|     | Feather                  | Megaphone                | Lipstick                 | Bamboo Cane              | Pixie Dust               | Juggling Balls             | High Dive                  |
+| --- | ------------------------ | ------------------------ | ------------------------ | ------------------------ | ------------------------ | -------------------------- | -------------------------- |
+| TTR | 10 (**11**); 70 (**70**) | 18 (**19**); 70 (**70**) | 30 (**33**); 70 (**70**) | 45 (**49**); 70 (**70**) | 70 (**77**); 70 (**70**) | 120 (**132**); 70 (**70**) | 210 (**231**); 70 (**70**) |
+| A   | 10 (**12**); 70 (**70**) | 18 (**22**); 70 (**70**) | 30 (**36**); 70 (**70**) | 48 (**58**); 70 (**70**) | 70 (**84**); 70 (**70**) | 120 (**144**); 70 (**70**) | 210 (**252**); 70 (**70**) |
+| B   | 10 (**12**); 70 (**70**) | 18 (**22**); 70 (**70**) | 30 (**36**); 70 (**70**) | 48 (**58**); 70 (**70**) | 75 (**90**); 70 (**70**) | 120 (**144**); 70 (**70**) | 210 (**252**); 70 (**70**) |
+| C   | 10 (**12**); 70 (**90**) | 18 (**22**); 70 (**90**) | 30 (**36**); 70 (**90**) | 48 (**58**); 70 (**90**) | 70 (**84**); 70 (**90**) | 120 (**144**); 70 (**90**) | 210 (**252**); 70 (**90**) |
+| D   | 10 (**12**); 70 (**90**) | 18 (**22**); 70 (**90**) | 30 (**36**); 70 (**90**) | 48 (**58**); 70 (**90**) | 75 (**90**); 70 (**90**) | 120 (**144**); 70 (**90**) | 210 (**252**); 70 (**90**) |
+
 ### trap
 
 Does trap need to undergo some kind of balancing of its own? Maybe. If sound is
@@ -140,11 +284,13 @@ C is similar to A in that it makes Quicksand and Trapdoor considerably
 stronger, but nerfs TNT a bit, and also in that it is a sort of
 &ldquo;rationalization&rdquo; of TTR: the deltas make use of the sequence
 \[(0,&nbsp;)8, 15, 21, 26\], which follows the recurrence relation
-*a*<sub>*n*</sub>&nbsp;=&nbsp;2*a*<sub>*n*-1</sub>&nbsp;-&nbsp;*a*<sub>*n*-2</sub>&nbsp;-&nbsp;1.
-This is, in some sense, the opposite of the method used in the sound section,
-where the deltas have a slope of +1 (thus creating a [triangular
-sequence](https://en.wikipedia.org/wiki/Triangular_number)), rather than -1
-(thus creating a triangular sequence, but negative) as they do here.
+*a*<sub>*n*</sub>&nbsp;=&nbsp;2*a*<sub>*n*&minus;1</sub>&nbsp;&minus;&nbsp;*a*<sub>*n*&minus;2</sub>&nbsp;&minus;&nbsp;1.
+This is, in some sense, related to the method used in the sound section, where
+the deltas have a slope of +1 (thus creating a [triangular
+sequence](https://en.wikipedia.org/wiki/Triangular_number)), rather than the
+deltas-of-the-deltas having a slope of &minus;1 (thus creating a [tetrahedral
+sequence](https://en.wikipedia.org/wiki/Tetrahedral_number), but negative) as
+they do here.
 
 D is similar to C but without the &ldquo;rationalization&rdquo;; the only
 important changes are to the damage of level &le;4 trap gags. Rather than
@@ -165,16 +311,16 @@ used (viz. +11).
 
 Format:
 
-rounds; `propAcc`/**organic `propAcc`**
+rounds; `propAcc` (**organic `propAcc`**)
 
-|     | $1 Bill      | Small Magnet | $5 Bill      | Big Magnet   | $10 Bill     | Hypno        | Presentation   |
-| --- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | -------------- |
-| TTR | 2; 50/**60** | 2; 50/**60** | 3; 60/**70** | 3; 60/**70** | 4; 70/**80** | 4; 70/**80** | 15; 90/**100** |
-| A   | 1; 50/**60** | 1; 50/**60** | 1; 60/**70** | 1; 60/**70** | 1; 70/**80** | 1; 70/**80** | 15; 90/**100** |
-| B   | 1; 50/**70** | 1; 50/**70** | 1; 60/**80** | 1; 60/**80** | 1; 70/**90** | 1; 70/**90** | 15; 90/**110** |
-| C   | 2; 50/**60** | 1; 50/**60** | 2; 60/**70** | 1; 60/**70** | 2; 70/**80** | 1; 70/**80** | 15; 90/**100** |
-| BC  | 2; 50/**70** | 1; 50/**70** | 2; 60/**80** | 1; 60/**80** | 2; 70/**90** | 1; 70/**90** | 15; 90/**110** |
-| D   | 2; 40/**70** | 1; 40/**70** | 2; 50/**80** | 1; 50/**80** | 2; 60/**90** | 1; 60/**90** | 15; 90/**120** |
+|     | $1 Bill        | Small Magnet   | $5 Bill        | Big Magnet     | $10 Bill       | Hypno          | Presentation     |
+| --- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | ---------------- |
+| TTR | 2; 50 (**60**) | 2; 50 (**60**) | 3; 60 (**70**) | 3; 60 (**70**) | 4; 70 (**80**) | 4; 70 (**80**) | 15; 90 (**100**) |
+| A   | 1; 50 (**60**) | 1; 50 (**60**) | 1; 60 (**70**) | 1; 60 (**70**) | 1; 70 (**80**) | 1; 70 (**80**) | 15; 90 (**100**) |
+| B   | 1; 50 (**70**) | 1; 50 (**70**) | 1; 60 (**80**) | 1; 60 (**80**) | 1; 70 (**90**) | 1; 70 (**90**) | 15; 90 (**110**) |
+| C   | 2; 50 (**60**) | 1; 50 (**60**) | 2; 60 (**70**) | 1; 60 (**70**) | 2; 70 (**80**) | 1; 70 (**80**) | 15; 90 (**100**) |
+| BC  | 2; 50 (**70**) | 1; 50 (**70**) | 2; 60 (**80**) | 1; 60 (**80**) | 2; 70 (**90**) | 1; 70 (**90**) | 15; 90 (**110**) |
+| D   | 2; 40 (**70**) | 1; 40 (**70**) | 2; 50 (**80**) | 1; 50 (**80**) | 2; 60 (**90**) | 1; 60 (**90**) | 15; 90 (**120**) |
 
 Excluding TTR, BC is the strongest here, and A is the weakest. It&rsquo;s not
 immediately clear how B, C, and D stack up in terms of strength because they
@@ -246,16 +392,16 @@ attack when they are *automatically* unlured. Also, making this mechanical
 change could justify using one of the numerical balancing schemes but with an
 extra round of duration added to all lure gags.
 
-#### pros
+##### pros
 
 - Actually helps to balance lure-based and lureless play and allow them to
   coexist.
-- Allows other changes to make more sense, like numeric balancing,
+- Allows other changes to make more sense, like: numeric balancing,
   not-quite-as-nerfed lure gag durations, and cogs not immediately attacking
   when automatically unlured.
 - Makes single-target lure gags more useful, relatively speaking.
 
-#### cons
+##### cons
 
 - Requires an actual mechanical change, not just a numeric one.
 - Not actually useful if you don&rsquo;t care about making lure-based and
@@ -552,3 +698,5 @@ troubling when we are generally talking about lure gags whose effects last for
 around 1 round each. So, again, the coexistence of lure-based play and lureless
 play still has the same friction and the problem doesn&rsquo;t really seem to
 be solved (excepting perhaps some edge cases).
+
+See the section on balancing lure mechanically for a possible solution.
