@@ -220,6 +220,85 @@ healing (**organic healing**); `propAcc` (**organic `propAcc`**)
 | C   | 10 (**12**); 70 (**90**) | 18 (**22**); 70 (**90**) | 30 (**36**); 70 (**90**) | 48 (**58**); 70 (**90**) | 70 (**84**); 70 (**90**) | 120 (**144**); 70 (**90**) | 210 (**252**); 70 (**90**) |
 | D   | 10 (**12**); 70 (**90**) | 18 (**22**); 70 (**90**) | 30 (**36**); 70 (**90**) | 48 (**58**); 70 (**90**) | 75 (**90**); 70 (**90**) | 120 (**144**); 70 (**90**) | 210 (**252**); 70 (**90**) |
 
+First note that all proposals (A, B, C, and D) raise the healing amount of
+Bamboo Cane from 45 to 48, as per the section on the Bamboo Cane.
+
+A raises the bonus healing amount for having organic toonup by a factor of 2,
+from 10% extra (rounded up to the nearest integer, to a minimum of 1 extra) to
+20% (ditto). This is mathematically convenient not just because it doubles the
+benefit, but because division by 5 is still fairly easy (although not as easy
+as by 10) in decimal, and also because this same mechanic of 20%-rounded-up is
+also used for yellow damage (`hpBonus`) against cogs, so players are used to
+doing this kind of calculation already. Here we can see what impact this has on
+per-target healing from multi-target gags:
+
+| Megaphone (2 targets)     | Megaphone (3 targets)         | Bamboo Cane (2 targets)     | Bamboo Cane (3 targets)             | Juggling Balls (2 targets)  | Juggling Balls (3 targets)          |
+| ------------------------- | ----------------------------- | --------------------------- | ----------------------------------- | --------------------------- | ----------------------------------- |
+| \[9, 9\] (**\[11, 11\]**) | \[6, 6, 6\] (**\[8, 7, 7\]**) | \[24, 24\] (**\[29, 29\]**) | \[16, 16, 16\] (**\[20, 19, 19\]**) | \[60, 60\] (**\[72, 72\]**) | \[40, 40, 40\] (**\[48, 48, 48\]**) |
+
+The intent of simply increasing the benefits of organic toonup is to make it
+more useful and appealing, rather than hoping that the same thing that works
+for other tracks (drop, squirt, throw, sound, and trap) will work for a track
+that doesn&rsquo;t do any damage to cogs.
+
+B is identical to A except that the base healing of Pixie Dust is raised from
+70 to 75, for the reasons explained at the end of the section on the Bamboo
+Cane gag.
+
+C is similar to A except that there is even further incentive for organic
+toonup, by raising `propAcc` by 20 across the board when the gags are organic.
+The number 20 is chosen in particular for two reasons: one is that it puts
+toonup gags at 97.5% accuracy when the track is maxed (97.5% being exactly
+halfway between 95% and 100%), and the other reason is that 20 is conveniently
+also the number used for a single stun&rsquo;s contribution to gag accuracy.
+The 97.5% figure is obtained because `trackExp` for toonup gags is halved
+compared to its calculation for all other gag tracks; with maxed toonup, that
+is a `trackExp` of 30. So we have an `atkAcc` of
+90&nbsp;+&nbsp;30&nbsp;=&nbsp;120 (because `tgtDef` and `bonus` don&rsquo;t
+apply to toonup). With the `clamp_acc` function defined in the section on
+clamping `atkAcc`, we have:
+
+```python
+if atkAcc <= 95:
+    return max(atkAcc, 0)
+else:
+    return min(95 + (atkAcc - 95) / 10, 100)
+```
+
+```python
+if 120 <= 95:
+    return max(120, 0)
+else:
+    return min(95 + (120 - 95) / 10, 100)
+```
+
+```python
+return min(95 + (120 - 95) / 10, 100)
+```
+
+```python
+return min(95 + 25 / 10, 100)
+```
+
+```python
+return min(95 + 2.5, 100)
+```
+
+```python
+return 97.5
+```
+
+And finally, D is to C as B is to A.
+
+Choosing between these 4 options is a matter of how much organic toonup really
+needs to be buffed to be roughly as viable as any of the other 6 possible
+organic tracks, as well as a matter of how powerful one is willing to make
+toonup. It is clear that out of these 4 options, A is the weakest and D is the
+strongest. But hopefully, the case that I have made is convincing, and 75-laff
+Pixie Dust really does create better intra-track balance. If this is the case,
+then it seems that whether or not 75-laff Pixie Dust is the right choice is a
+matter of the sheer power of the toonup gag track overall.
+
 ### trap
 
 Does trap need to undergo some kind of balancing of its own? Maybe. If sound is
