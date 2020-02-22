@@ -7,14 +7,18 @@
 - [gag buffs/nerfs](#gag-buffsnerfs)
     - [trap](#trap)
     - [lure](#lure)
+        - [balancing numerically](#balancing-numerically)
+        - [balancing mechanically](#balancing-mechanically)
+        - [pros](#pros)
+        - [cons](#cons)
     - [sound](#sound)
 - [accuracy](#accuracy)
     - [`luredRatio`](#luredratio)
-        - [Pros](#pros)
-        - [Cons](#cons)
+        - [pros](#pros-1)
+        - [cons](#cons-1)
     - [`atkAcc` clamping](#atkacc-clamping)
-        - [Pros](#pros-1)
-        - [Cons](#cons-1)
+        - [pros](#pros-2)
+        - [cons](#cons-2)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
 
@@ -138,7 +142,9 @@ stronger, but nerfs TNT a bit, and also in that it is a sort of
 \[(0,&nbsp;)8, 15, 21, 26\], which follows the recurrence relation
 *a*<sub>*n*</sub>&nbsp;=&nbsp;2*a*<sub>*n*-1</sub>&nbsp;-&nbsp;*a*<sub>*n*-2</sub>&nbsp;-&nbsp;1.
 This is, in some sense, the opposite of the method used in the sound section,
-where the deltas have a slope of +1 (rather than -1 as they do here).
+where the deltas have a slope of +1 (thus creating a [triangular
+sequence](https://en.wikipedia.org/wiki/Triangular_number)), rather than -1
+(thus creating a triangular sequence, but negative) as they do here.
 
 D is similar to C but without the &ldquo;rationalization&rdquo;; the only
 important changes are to the damage of level &le;4 trap gags. Rather than
@@ -154,6 +160,8 @@ damage for Railroad is chosen by selecting a delta value that has already been
 used (viz. +11).
 
 ### lure
+
+#### balancing numerically
 
 Format:
 
@@ -198,14 +206,60 @@ get the left-side cogs, &amp;c. To remedy this, C doubles the number of rounds
 of effectiveness for single-target lures only.
 
 BC combines B and C and thus is more powerful than either, and also attempts to
-fix both problems with A. In case BC was too powerful and/or the problem of
-organic lure wasn&rsquo;t solved enough, D is a weakened version of BC that
-makes organic lure effectively worth a stun and a half, but lowers inorganic
-lure `propAcc` by 10 at all levels (except 7). This may seem harsh (and indeed,
-it is perhaps unfortunate that making organic lure last for more rounds
-isn&rsquo;t really viable and so D relies on making inorganic lure *more
-fickle*), but all is not lost for inorganic lure users so long as their friends
-stun dilligently enough to reach an acceptable(!) rate of success.
+fix both problems with A.
+
+In case BC was too powerful and/or the problem of organic lure wasn&rsquo;t
+solved enough, D is a weakened version of BC that makes organic lure
+effectively worth a stun and a half, but lowers inorganic lure `propAcc` by 10
+at all levels (except 7). This may seem harsh (and indeed, it is perhaps
+unfortunate that making organic lure last for more rounds isn&rsquo;t really
+viable and so D relies on making inorganic lure *more fickle*), but all is not
+lost for inorganic lure users so long as their friends stun dilligently enough
+(one half of an extra stun on average to reach TTR levels of accuracy) to reach
+an acceptable rate of success.
+
+In my opinion, as far as balancing &ldquo;numerically&rdquo; goes, either BC or
+D is probably the best bet.
+
+#### balancing mechanically
+
+Possibly, in addition to balancing numerically, it may be feasible to alter the
+actual mechanics of lure gags somewhat. In particular, the idea is to
+permanently mark any cog that is successfully lured, and make it so that cogs
+that are so marked cannot be lured. Marked (read:
+successfully-lured-at-some-point) cogs cannot be lured in much the same way
+that cogs currently in a lured state cannot be lured in TTR.
+
+The intent here is to prevent low lure durations from encouraging a continuous
+stream of luring, killing, luring, cogs getting automatically unlured,
+*re-luring*, &amp; so on &amp; so forth. Rather than effectively giving players
+free (except for taking a hit during the initial unlure) re-lures in many cases
+because they would be luring anyways to lure fresh new cogs, this ideally
+encourages actual lureless play alongside lure-based play. In addition,
+there&rsquo;s the incidental consequence of making single-target lure more
+useful since it&rsquo;s generally less likely that there&rsquo;s more than one
+cog that can be lured at any given time.
+
+This change could be done in tandem with not just a numeric balance of lure
+(like BC), but also possibly a change that causes cogs not to immediately
+attack when they are *automatically* unlured. Also, making this mechanical
+change could justify using one of the numerical balancing schemes but with an
+extra round of duration added to all lure gags.
+
+#### pros
+
+- Actually helps to balance lure-based and lureless play and allow them to
+  coexist.
+- Allows other changes to make more sense, like numeric balancing,
+  not-quite-as-nerfed lure gag durations, and cogs not immediately attacking
+  when automatically unlured.
+- Makes single-target lure gags more useful, relatively speaking.
+
+#### cons
+
+- Requires an actual mechanical change, not just a numeric one.
+- Not actually useful if you don&rsquo;t care about making lure-based and
+  lureless play balanced and coexistent.
 
 ### sound
 
@@ -265,11 +319,11 @@ unfortunate, because:
 The proposal is to get rid of `luredRatio` wholesale, and collapse `bonus` and
 `prevHits` so that they are the same by definition.
 
-#### Pros
+#### pros
 
 - Simplifies accuracy calculation.
 
-#### Cons
+#### cons
 
 None.
 
@@ -321,7 +375,7 @@ you&rsquo;re working in base 10, you just move the decimal point one place to
 the left). The magic number here is thus 145, because it is exactly when
 `atkAcc >= 145` that the gag is guaranteed to hit.
 
-#### Pros
+#### pros
 
 - Makes accuracy more meaningful in general, because its value changes more
   freely to reflect the strategy being used.
@@ -330,7 +384,7 @@ the left). The magic number here is thus 145, because it is exactly when
 - Makes the game less reliant on dumb luck by allowing accuracy to be pushed
   beyond the 95% mark (with the right gag picks), even up to 100%.
 
-#### Cons
+#### cons
 
 - Complicates accuracy calculation.
 - This change would raise the overall power level of toons, since in some cases
