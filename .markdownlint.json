@@ -4,6 +4,8 @@
   "MD024": { "allow_different_nesting": true },
   "MD026": { "punctuation": ".,:。，；：" },
   "MD029": { "style": "ordered" },
-  "MD033": { "allowed_elements": ["br", "sup", "sub", "small", "i"] },
+  "MD033": {
+    "allowed_elements": ["details", "summary", "sup", "sub", "small", "i"]
+  },
   "MD035": { "style": "---" }
 }
