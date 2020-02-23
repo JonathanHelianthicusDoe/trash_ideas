@@ -25,6 +25,8 @@
         - [cons](#cons-2)
 - [facilities](#facilities)
     - [barriers to entry](#barriers-to-entry)
+        - [factories: the side entrance](#factories-the-side-entrance)
+        - [factory-like facilities](#factory-like-facilities)
     - [gag retention](#gag-retention)
 - [cogs](#cogs)
 - [toontasks](#toontasks)
@@ -631,6 +633,62 @@ facilities in the other three cog HQs) and bosses (all four in all four cog
 HQs). Note that this does not, however, include cog buildings.
 
 ### barriers to entry
+
+In TTR, the barriers to entry for the various facilities are as follows:
+
+| facility       | requirement(s)                                           |
+| -------------- | -------------------------------------------------------- |
+| factory, front |                                                          |
+| factory, side  | 31 laff                                                  |
+| coin mint      |                                                          |
+| dollar mint    | 66 laff                                                  |
+| bullion mint   | 71 laff                                                  |
+| DA office A    |                                                          |
+| DA office B    | 81 laff                                                  |
+| DA office C    | 86 laff                                                  |
+| DA office D    | 96 laff                                                  |
+| front 3        |                                                          |
+| middle 6       | 95 laff                                                  |
+| back 9         | 100 laff                                                 |
+| VP             | 10 factories completed                                   |
+| CFO            | cashbot suit tasks (76 laff and access to 6 gag tracks)  |
+| CJ             | lawbot suit tasks (100 laff and access to 6 gag tracks)  |
+| CEO            | bossbot suit tasks (100 laff and access to 6 gag tracks) |
+
+It is nice that some facilities that are considered to be designed for toons
+that are *at least* middling in terms of power are nevertheless available to
+anyone: coin mints, DA offices A, front 3s, and VPs. However, the requirements
+for facilities that have them range from &ldquo;unfortunate, at least for
+certain styles of play&rdquo; to &ldquo;completely unnecessary&rdquo;. There
+are basically three groups of requirements that we want to talk about here, and
+so we will tackle them one-by-one in descending order of silliness.
+
+#### factories: the side entrance
+
+Really, no amount of argumentation *should* be required to establish that the
+side entrance of the sellbot factory should have no barriers to entry. The
+front entrance already has no such barriers, and they are both just different
+entrances to the same facility anyways. Presumably, the reasoning for giving
+the side entrance a laff limit is that if you go left after completing the
+first cog battle, you have to go through *stompers* and then complete another
+cog battle; if you keep going, you have to do the *most dangerous walk* across
+the catwalk area of the factory before finally getting to the part of the
+factory that every factory run has to do anyways. However, there are a few
+problems with this reasoning for instituting a laff limit:
+
+- Most front entrance runs are long runs anyways, so they do all of this stuff
+  as well (but with extra cog fights and catwalking).
+- Just because you enter via the side entrance does not mean that you *have* to
+  go left after the first cog fight; you can just go straight.
+- Obstacles like stompers and goons can indeed shave off significant amounts of
+  laff if you aren&rsquo;t at least somewhat careful, but typically the real
+  danger is in the last 4 cog fights (a.k.a. the only part of the factory that
+  literally every factory run must complete anyways).
+
+It&rsquo;s clear that the way to go is lowering the laff limit on the factory
+side entrance to 1, to match the front entrance.
+
+#### factory-like facilities
 
 <!-- ... -->
 
