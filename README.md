@@ -4,6 +4,7 @@
 
 - [general attitude/philosophy (prelude)](#general-attitudephilosophy-prelude)
     - [what about other (non-TTR) servers, though?](#what-about-other-non-ttr-servers-though)
+    - [legal](#legal)
 - [gag buffs/nerfs](#gag-buffsnerfs)
     - [toonup](#toonup)
         - [organic toonup](#organic-toonup)
@@ -27,8 +28,9 @@
     - [barriers to entry](#barriers-to-entry)
         - [factories: the side entrance](#factories-the-side-entrance)
         - [factory-like facilities](#factory-like-facilities)
+        - [bosses (except VP)](#bosses-except-vp)
     - [gag retention](#gag-retention)
-- [cogs](#cogs)
+- [cogs and laff](#cogs-and-laff)
 - [toontasks](#toontasks)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
@@ -84,6 +86,16 @@ instead focuses on TTR-as-essentially-TTO, that is, the &ldquo;base game&rdquo;
 in more or less the same state gameplay-wise as TTO in 2013. This acts as a
 starting point, or even <i>tabula rasa</i> (a <i>tabula rasa</i> that, like a
 newborn human mind, is not really a &ldquo;blank&rdquo; slate at all&hellip;).
+
+### legal
+
+This work is licensed to you (or to anyone else) under the terms of the
+[Creative Commons Attribution-ShareAlike 4.0
+International](https://creativecommons.org/licenses/by-sa/4.0/) license (or any
+later version of the same license, at your option).
+
+[![CC BY-SA 4.0+](https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+"CC BY-SA 4.0+")](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## gag buffs/nerfs
 
@@ -699,13 +711,76 @@ side entrance to 1, to match the front entrance.
 
 #### factory-like facilities
 
+Some other factory-like facilities besides factories themselves have laff
+requirements (viz. dollar &amp; bullion mints, DA offices B, C, &amp; D, middle
+6s, and back 9s). Is this warranted? At first it seems like it might indeed be
+warranted, considering that all of these factory-like facilities are
+significantly more difficult than factories. In addition, it seems unlikely
+that a toon that doesn&rsquo;t meet the laff requirements for one of these
+facilities will actually have a reason to do the facility. For the most part,
+these facilities are frequented for the purpose of getting ready for cog suit
+promotions; but anyone who is doing this must have the corresponding suit and
+thus enough laff to do the corresponding facilities.
+
+However, I want to argue that these laff limitations should be removed entirely
+(or weakened, at the very least), for a number of reasons:
+
+- Shortened versions of all of these factory-like facilities are available to
+  anyone, with no limitations. Coin mints, DA offices A, and front 3s all lack
+  requirements, but they present identical challenges to their laff-gated
+  counterparts! Therefore, for the sake of consistency, the requirements should
+  be lifted (or at least, can reasonably be lifted). It could be argued that
+  said laff-gated facilities do in fact present more challenge (enough to
+  warrant locking them off to those with insufficient laff) because of their
+  length. This is a kind of difficulty by attrition, where the danger is that
+  you run out of (sufficiently powerful) gags too quickly to complete the whole
+  facility. While this is indeed more of a problem for lower-laff toons
+  (because they generally have fewer gag tracks and smaller gag pouches), in
+  general this is not a good enough excuse. Imposing laff requirements means
+  disallowing a party that has just *one* member who does not meet the
+  requirement, so even a party with (to give the most extreme example) 3 maxed
+  toons and 1 toon who just barely does not meet the requirement is barred,
+  despite easily being able to handle the attrition. In addition, the
+  facilities themselves provide ways of restocking gags, and players can even
+  restock their own gags (and laff) through the use of SOS cards and unites.
+- It is common for toontasks to require things that can be easily (sometimes,
+  *most* easily) be found within these factory-like facilities. Of course, a
+  toon who doesn&rsquo;t meet the requirements can instead do the corresponding
+  facilities that don&rsquo;t have such requirements; however, because these
+  facilities are meant for teamwork (generally being done in parties of 4
+  toons), being more flexible in which ones you can do is a big help. Being
+  *able* to do a DA office D is a blessing when you need a DA office, and there
+  are already 3 people waiting for a 4<sup>th</sup> toon to join them so that
+  they can do a DA office D.
+- Completely preventing players from being able to do something just because
+  you have a vague idea that they probably aren&rsquo;t capable of it is
+  often poor design. It is needlessly frustrating for players who intentionally
+  play in an unexpected way, or intentionally seek extra challenge, or just
+  feel a bit more &ldquo;railroaded&rdquo; due to the game deciding for them
+  that they &ldquo;aren&rsquo;t ready yet&rdquo;. The possible punishment in
+  Toontown is never very great (going sad is not exactly the end of the world),
+  so allowing players to decide for themselves should be unproblematic.
+- Removing these laff requirements is even more important when you consider
+  implementing changes to the max laff mechanic in general. Particularly, laff
+  caps that allow players to limit how high their toon&rsquo;s laff will ever
+  be able to reach, and changes to max laff acquisition (viz. toontasks &amp;
+  minigames that reward laff), are both the kinds of changes that demand at
+  least the reconsideration of laff requirements. In many of these cases, max
+  laff levels are being lowered overall, and so laff requirements must be
+  removed (or at least lowered) in tandem.
+- If changes to requirements for doing bosses (see the next section) are
+  considered, then removing these laff requirements for factory-like facilities
+  will probably be necessary anyways.
+
+#### bosses (except VP)
+
 <!-- ... -->
 
 ### gag retention
 
 <!-- ... -->
 
-## cogs
+## cogs and laff
 
 <!-- ... -->
 
