@@ -28,10 +28,16 @@
     - [barriers to entry](#barriers-to-entry)
         - [factories: the side entrance](#factories-the-side-entrance)
         - [factory-like facilities](#factory-like-facilities)
-        - [bosses (except VP)](#bosses-except-vp)
-    - [gag retention](#gag-retention)
+        - [bosses (excluding VP)](#bosses-excluding-vp)
 - [cogs and laff](#cogs-and-laff)
+    - [limiting laff](#limiting-laff)
+        - [laff capping](#laff-capping)
+            - [pros](#pros-3)
+            - [cons](#cons-3)
+        - [nerfing toontasks (and company)](#nerfing-toontasks-and-company)
+    - [tweaking cog attacks](#tweaking-cog-attacks)
 - [toontasks](#toontasks)
+- [gag tracks](#gag-tracks)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
 
@@ -57,7 +63,12 @@ this paragraph.
 
 Some of the changes proposed here are meant to be combined with other such
 changes, but some may be designed *without* other changes in mind, for the sake
-of independence and flexibility.
+of independence and flexibility. This means &mdash; among other things &mdash;
+that this document is *not* a blueprint for a particular, single, version of
+Toontown with some choice combination of all of the proposed changes discussed
+within this document. Rather, when concretely forming an actual version of
+Toontown, careful judgement and deliberation should be applied to the concerns,
+reasoning, and proposals contained within this document.
 
 While the changes made here are obviously, first and foremost, changes made to
 balance the game and make it more fun, there are also some aesthetic
@@ -770,21 +781,290 @@ However, I want to argue that these laff limitations should be removed entirely
   removed (or at least lowered) in tandem.
 - If changes to requirements for doing bosses (see the next section) are
   considered, then removing these laff requirements for factory-like facilities
-  will probably be necessary anyways.
+  may be necessary anyways.
 
-#### bosses (except VP)
+#### bosses (excluding VP)
 
-<!-- ... -->
+After considering the requirements for entry into the side entrance of
+factories, and for entry into other factory-like facilities, we are now brought
+to the same issue w.r.t. boss fights (excluding VP, because it *effectively*
+has no requirements due to only requiring 10 factories). It may seem
+particularly obvious that there are no significant changes to be made to the
+requirements for entry into non-VP bosses, considering that all three require
+(and only require) some part of the main taskline to be completed. However,
+there are, <i>per se</i>, ways of loosening these requirements without making
+changes to the main taskline &mdash; and there are reasons to do so, as well.
 
-### gag retention
+What would be the motivation for loosening the requirements for entry into
+non-VP bosses? There are basically two motivations: first &amp; foremost is the
+desire to open up non-VP bosses to challenge runs. Basically, we are talking
+about uber toons here. In TTR, ubers are limited to maxing out their sellbot
+suit by defeating the VP many times (and doing many factories). Allowing them
+other activities (viz. 3 other possible bosses to run) to do would be a huge
+gameplay improvement for uber/challenge-run styles of play. The second (lesser)
+motivation is that as TTR&rsquo;s &ldquo;Crash Sellbot HQ&rdquo; and
+&ldquo;Crash Cashbot HQ&rdquo; events have shown, opening up bosses to more
+toons is a good bit of fun. Of course, this is *not* to actually propose what
+these two events do in particular, which involves nerfing said bosses to make
+them more accessible to toons of all power levels.
 
-<!-- ... -->
+There are two (*not* mutually exclusive) ways that the loosening of non-VP boss
+entry requirements can be achieved without any changes to the main taskline:
+
+1. Allow a similar mechanic to &ldquo;Crash Sellbot/Cashbot HQ&rdquo;, with
+   so-called &ldquo;rental suits&rdquo; that allow entry into bosses without
+   having the proper suit. This would be limited to just CFO, CJ, and CEO.
+   Rental suits are permanently level 1; that is, they cannot level up and are
+   always &ldquo;ready for promotion&rdquo;. The use of rental suits should
+   probably have requirements; requiring the completion of some factory-like
+   facilities (e.g. mirroring Sellbot HQ by requiring the completion of at
+   least 10 factory-like facilities within the corresponding cog HQ) and/or
+   requiring at least 1 maxed gag track should suffice (I would favor having
+   both requirements).
+2. Make the tasklines that grant cog HQ suits available to any toon that meets
+   one or both of the following requirements: **(2a)** the toon has completed
+   the normal pre-requisite tasks (as in TTR), **(2b)** the toon has a level 50
+   Mr. Hollywood suit.
+
+While these two options are not mutually exclusive, it probably suffices to
+just pick one. The second option seems more appealing, because it offers more
+of a sense of progression. The sense of progression is both because you have to
+progress all the way through Sellbot HQ before getting to the other HQs, and
+because it allows leveling up the suits that you get for the other HQs, unlike
+rental suits. However, this is a higher barrier to entry than the first option
+(which may be a bad thing), and means more laff for ubers due to the other 3
+cog HQ suits also granting 5 laff each (this is not so much a problem with laff
+capping). The second option also probably means that factory-like facilities
+will be more popular (even if defeating some of them is required to get a
+rental suit) because bossing on low-laff toons will still mean having to earn
+promotions.
 
 ## cogs and laff
 
-<!-- ... -->
+This section discusses cog behavior (read: attacks) and maximum laff for toons.
+These topics are inherently related for the obvious reason that higher maximum
+laff is primarily useful for being able to handle more punishment from cogs
+before going sad. However, make no mistake: these topics are also intimately
+tied to the ability of toons to defeat &amp; otherwise control cogs, that is,
+gag balance. These topics are difficult because they are so entangled in the
+overall power level of toons in the game, including toons doing challenge runs
+like e.g. uber toons and/or semi toons.
+
+That being said, even if these topics are difficult to treat due to being
+entangled in&hellip; well, everything else, there is one thing that we can
+clearly state: toons have an excess of laff points in vanilla TTO/TTR. In many
+ways this is just saying that the balance between toons and cogs is skewed
+heavily in favor of toons, hence the existence of challenge run styles of play.
+In addition, it is also clear that multi-target attacks that cogs can perform
+are disproportionately powerful when compared to their single-target
+counterparts. This makes cogs that have no multi-target attacks (e.g. any
+bossbots of higher rank than Yesman) disproportionately weak, and also makes
+cogs that do have multi-target attacks fickle in terms of damage output because
+it is a matter of chance whether or not they choose their attacks to be
+multi-target ones.
+
+The concern about multi-target cog attacks is not necessarily a sign of an
+actual problem; it might be perfectly okay for some cogs to be limited to
+single-target attacks, and for it to be a rather significant matter of chance
+whether or not certain cogs choose to use their multi-target attack(s). But it
+does give something to consider when trying to balance cogs&rsquo; attacks.
+
+### limiting laff
+
+There are three main ways of limiting laff that we want to consider here: laff
+capping, nerfing toontasks (and other max-laff-rewarding activities), and
+lowering starting laff.
+
+#### laff capping
+
+Laff capping means allowing players to choose a laff limit for their toon at
+the point of toon creation. A laff-capped toon starts with the same max laff as
+a normal toon (15, unless modifications are made), but any max laff increases
+that they receive can raise their max laff to, *at most*, their laff cap. This
+is a pretty mechanically straightforward change and has already been
+implemented at least once before. Laff capping is an appealing proposition, but
+its usefulness is essentially limited to the creation of uber toons; it does
+only a little to help balance the game generally, because it is entirely
+voluntary.
+
+##### pros
+
+- It&rsquo;s voluntary, which has the benefit of encouraging a wider range of
+  playstyles and allowing players to choose for themselves.
+- It&rsquo;s flexible enough to limit max laff to any arbitrary degree.
+
+##### cons
+
+- It&rsquo;s voluntary, which has the drawback of doing only a little to help
+  balance the game generally, and
+- Being voluntary also tends to cause greater power disparities between toons
+  that are trying to cooperate.
+
+#### nerfing toontasks (and company)
+
+It is possible to limit maximum laff in general (and thus take a step towards
+balancing the game more generally) by nerfing the max laff rewards given by
+toontasks and other relevant activites. The following list chronicles the
+progression of the mainline toontasks that award max laff, including the max
+laff that a toon has *after* completing each particular neighborhood/playground
+(assuming all max laff boosts are from toontasks, and not other sources like
+e.g. fishing):
+
+<details>
+<summary>max-laff-awarding toontasks</summary>
+
+- Toontown Central (25 laff)
+    - +1 laff (Professor Pete)
+    - +2 laff (Honey Haha)
+    - +2 laff (Professor Wiggle)
+    - +3 laff (Sticky Lou)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- Donald&rsquo;s Dock (34 laff)
+    - +2 laff (Billy Budd)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +2 laff (generic)
+    - +3 laff (generic)
+- Daisy Gardens (43 laff)
+    - +1 laff (Sofie Squirt/Artie/Inkeeper Janet/Barber Bjorn)
+    - +1 laff (Sofie Squirt/Artie/Inkeeper Janet/Barber Bjorn)
+    - +2 laff (Postman Felipe)
+    - +2 laff (sprocket recovery/generic)
+    - +3 laff (Uncle Mud/Uncle Spud/Aunt Hill)
+- Minnie&rsquo;s Melodyland (52 laff)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +2 laff (generic)
+    - +2 laff (generic)
+    - +3 laff (generic)
+- The Brrrgh (61 laff)
+    - +1 laff (Chicken Boy/Wynne Chill/Eddie the Yeti)
+    - +1 laff (Chicken Boy/Wynne Chill/Eddie the Yeti)
+    - +2 laff (Sweaty Pete)
+    - +3 laff (Lounge Lassard)
+    - +2 laff (generic)
+- Donald&rsquo;s Dreamland I (71 laff)
+    - +1 laff (Powers Erge)
+    - +2 laff (Lawful Linda)
+    - +3 laff (Rocco)
+    - +4 laff (Zari)
+- Donald&rsquo;s Dreamland II (81 laff)
+    - +1 laff (generic)
+    - +2 laff (generic)
+    - +3 laff (generic)
+    - +4 laff (generic)
+- Donald&rsquo;s Dreamland III (91 laff)
+    - +1 laff (generic)
+    - +2 laff (generic)
+    - +3 laff (generic)
+    - +4 laff (generic)
+- Donald&rsquo;s Dreamland IV (100 laff)
+    - +1 laff (generic)
+    - +2 laff (generic)
+    - +3 laff (generic)
+    - +3 laff (generic)
+
+</details>
+
+An easy way to lower the overall amount of laff awarded by tasks is by lowering
+only the rewards of tasks that award &ge;2 laff. This way, the entire structure
+of the taskline is totally intact. Here is what this approach looks like if
+taken to the extreme (all laff-awarding tasks give exactly +1 max laff):
+
+<details>
+<summary>all max-laff-awarding toontasks awarding +1</summary>
+
+- Toontown Central (21 laff)
+    - +1 laff (Professor Pete)
+    - +1 laff (Honey Haha)
+    - +1 laff (Professor Wiggle)
+    - +1 laff (Sticky Lou)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- Donald&rsquo;s Dock (26 laff)
+    - +1 laff (Billy Budd)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- Daisy Gardens (31 laff)
+    - +1 laff (Sofie Squirt/Artie/Inkeeper Janet/Barber Bjorn)
+    - +1 laff (Sofie Squirt/Artie/Inkeeper Janet/Barber Bjorn)
+    - +1 laff (Postman Felipe)
+    - +1 laff (sprocket recovery/generic)
+    - +1 laff (Uncle Mud/Uncle Spud/Aunt Hill)
+- Minnie&rsquo;s Melodyland (36 laff)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- The Brrrgh (41 laff)
+    - +1 laff (Chicken Boy/Wynne Chill/Eddie the Yeti)
+    - +1 laff (Chicken Boy/Wynne Chill/Eddie the Yeti)
+    - +1 laff (Sweaty Pete)
+    - +1 laff (Lounge Lassard)
+    - +1 laff (generic)
+- Donald&rsquo;s Dreamland I (45 laff)
+    - +1 laff (Powers Erge)
+    - +1 laff (Lawful Linda)
+    - +1 laff (Rocco)
+    - +1 laff (Zari)
+- Donald&rsquo;s Dreamland II (49 laff)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- Donald&rsquo;s Dreamland III (53 laff)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+- Donald&rsquo;s Dreamland IV (57 laff)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+    - +1 laff (generic)
+
+</details>
+
+In combination with other propositions, e.g. the nerfing of gag tracks like
+sound &amp; lure, the buffing of cog attacks, &amp;c., this particular approach
+is probably too steep of a nerf; starting The Brrrgh with 36 laff is tough.
+Also, without changes to other sources of max laff increases, the amount of max
+laff available from toontasks alone is worryingly similar to the amount of laff
+available from other sources: 42 from tasks, and 37 from elsewhere (plus 15
+starting laff, for an absolute maximum laff of 94).
+
+The good news is that exactly how much laff you distribute via toontasks, and
+exactly *when* in the taskline you distribute it, is very tweakable: setting
+all max-laff-awarding tasks to award +1 laff works as one extreme, and some
+middle ground between that and something much more high-powered like vanilla
+TTO/TTR can easily be achieved by tweaking the rewards within any of the
+various neighborhoods/playgrounds.
+
+Ultimately, to what degree it makes sense to cripple (or perhaps boost?) max
+laff accumulation is *wildly dependent* on what other changes are made (or not
+made) to the game.
+
+The quantity of max laff increases available from non-task sources can be
+tweaked to better match the max laff increases available from tasks, which
+brings us to the topic of how to nerf these non-task sources if necessary.
+
+When it comes to non-task sources of max laff increases, all of them are given
++1 at a time, so the technique used for toontasks doesn&rsquo;t apply. Instead,
+we have two options: some (or all) of the increases granted by a given activity
+have to be removed outright, and/or an overall cap can be placed on the total
+number of max laff points that can be obtained from non-task sources.
+
+### tweaking cog attacks
 
 ## toontasks
+
+<!-- garbage tasks... -->
+
+## gag tracks
 
 <!-- ... -->
 
