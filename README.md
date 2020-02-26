@@ -35,6 +35,10 @@
             - [pros](#pros-3)
             - [cons](#cons-3)
         - [nerfing toontasks (and company)](#nerfing-toontasks-and-company)
+            - [pros (of lowering max-laff awards for non-task activities)](#pros-of-lowering-max-laff-awards-for-non-task-activities)
+            - [cons (of lowering max-laff awards for non-task activities)](#cons-of-lowering-max-laff-awards-for-non-task-activities)
+            - [pros (of capping max-laff gain attainable from non-task activities)](#pros-of-capping-max-laff-gain-attainable-from-non-task-activities)
+            - [cons (of capping max-laff gain attainable from non-task activities)](#cons-of-capping-max-laff-gain-attainable-from-non-task-activities)
     - [tweaking cog attacks](#tweaking-cog-attacks)
 - [toontasks](#toontasks)
 - [gag tracks](#gag-tracks)
@@ -84,7 +88,7 @@ In this document, heeding these aesthetic concerns is referred to as
 &ldquo;rationalization&rdquo; (both in the mathematical sense, from
 &ldquo;ratio&rdquo;, and the usual sense of &ldquo;to give a rationale&rdquo;).
 Again, these concerns are always strictly secondary to the more important
-concerns of game balance and fun.
+concerns of game balance &amp; fun.
 
 ### what about other (non-TTR) servers, though?
 
@@ -149,8 +153,8 @@ between a cog not dying and a cog dying, simply because a cog with 1 HP is
 alive and one with 0 HP is not. Strictly speaking, a similar principle does
 apply to toonup: very slight differences in healing amounts can make the
 difference between a toon being fully healed and a toon not being fully healed,
-simply because a toon with 1 laff fewer than their max laff is not fully
-healed, and a toon with laff equal to their max laff is. But the difference
+simply because a toon with 1 laff fewer than their max-laff is not fully
+healed, and a toon with laff equal to their max-laff is. But the difference
 between a toon with laff 1 fewer than their maximum and a cog with 1 HP is very
 stark. Getting a toon to the point of having 1 laff missing is &ldquo;good
 enough&rdquo;; it is not the same, but is nevertheless nearly indistinguishible
@@ -772,12 +776,12 @@ However, I want to argue that these laff limitations should be removed entirely
   Toontown is never very great (going sad is not exactly the end of the world),
   so allowing players to decide for themselves should be unproblematic.
 - Removing these laff requirements is even more important when you consider
-  implementing changes to the max laff mechanic in general. Particularly, laff
+  implementing changes to the max-laff mechanic in general. Particularly, laff
   caps that allow players to limit how high their toon&rsquo;s laff will ever
-  be able to reach, and changes to max laff acquisition (viz. toontasks &amp;
-  minigames that reward laff), are both the kinds of changes that demand at
-  least the reconsideration of laff requirements. In many of these cases, max
-  laff levels are being lowered overall, and so laff requirements must be
+  be able to reach, and changes to max-laff acquisition (viz. toontasks &amp;
+  minigames that award max-laff), are both the kinds of changes that demand at
+  least the reconsideration of laff requirements. In many of these cases,
+  max-laff levels are being lowered overall, and so laff requirements must be
   removed (or at least lowered) in tandem.
 - If changes to requirements for doing bosses (see the next section) are
   considered, then removing these laff requirements for factory-like facilities
@@ -872,15 +876,15 @@ does give something to consider when trying to balance cogs&rsquo; attacks.
 ### limiting laff
 
 There are three main ways of limiting laff that we want to consider here: laff
-capping, nerfing toontasks (and other max-laff-rewarding activities), and
+capping, nerfing toontasks (and other max-laff-awarding activities), and
 lowering starting laff.
 
 #### laff capping
 
 Laff capping means allowing players to choose a laff limit for their toon at
-the point of toon creation. A laff-capped toon starts with the same max laff as
-a normal toon (15, unless modifications are made), but any max laff increases
-that they receive can raise their max laff to, *at most*, their laff cap. This
+the point of toon creation. A laff-capped toon starts with the same max-laff as
+a normal toon (15, unless modifications are made), but any max-laff increases
+that they receive can raise their max-laff to, *at most*, their laff cap. This
 is a pretty mechanically straightforward change and has already been
 implemented at least once before. Laff capping is an appealing proposition, but
 its usefulness is essentially limited to the creation of uber toons; it does
@@ -891,7 +895,7 @@ voluntary.
 
 - It&rsquo;s voluntary, which has the benefit of encouraging a wider range of
   playstyles and allowing players to choose for themselves.
-- It&rsquo;s flexible enough to limit max laff to any arbitrary degree.
+- It&rsquo;s flexible enough to limit max-laff to any arbitrary degree.
 
 ##### cons
 
@@ -903,12 +907,12 @@ voluntary.
 #### nerfing toontasks (and company)
 
 It is possible to limit maximum laff in general (and thus take a step towards
-balancing the game more generally) by nerfing the max laff rewards given by
+balancing the game more generally) by nerfing the max-laff rewards given by
 toontasks and other relevant activites. The following list chronicles the
-progression of the mainline toontasks that award max laff, including the max
-laff that a toon has *after* completing each particular neighborhood/playground
-(assuming all max laff boosts are from toontasks, and not other sources like
-e.g. fishing):
+progression of the mainline toontasks that award max-laff, including the
+max-laff that a toon has *after* completing each particular
+neighborhood/playground (assuming all max-laff boosts are from toontasks, and
+not other sources like e.g. fishing):
 
 <details>
 <summary>max-laff-awarding toontasks</summary>
@@ -967,10 +971,11 @@ e.g. fishing):
 
 </details>
 
-An easy way to lower the overall amount of laff awarded by tasks is by lowering
-only the rewards of tasks that award &ge;2 laff. This way, the entire structure
-of the taskline is totally intact. Here is what this approach looks like if
-taken to the extreme (all laff-awarding tasks give exactly +1 max laff):
+An easy way to lower the overall amount of max-laff awarded by tasks is by
+lowering only the rewards of tasks that award &ge;2 max-laff. This way, the
+entire structure of the taskline is totally intact. Here is what this approach
+looks like if taken to the extreme (all max-laff-awarding tasks giving exactly
++1 max-laff):
 
 <details>
 <summary>all max-laff-awarding toontasks awarding +1</summary>
@@ -1032,10 +1037,10 @@ taken to the extreme (all laff-awarding tasks give exactly +1 max laff):
 In combination with other propositions, e.g. the nerfing of gag tracks like
 sound &amp; lure, the buffing of cog attacks, &amp;c., this particular approach
 is probably too steep of a nerf; starting The Brrrgh with 36 laff is tough.
-Also, without changes to other sources of max laff increases, the amount of max
-laff available from toontasks alone is worryingly similar to the amount of laff
-available from other sources: 42 from tasks, and 37 from elsewhere (plus 15
-starting laff, for an absolute maximum laff of 94).
+Also, without changes to other sources of max-laff increases, the amount of
+max-laff available from toontasks alone is worryingly similar to the amount of
+laff available from other sources: 42 from tasks, and 37 from elsewhere (plus
+15 starting laff, for an absolute maximum laff of 94).
 
 The good news is that exactly how much laff you distribute via toontasks, and
 exactly *when* in the taskline you distribute it, is very tweakable: setting
@@ -1044,19 +1049,144 @@ middle ground between that and something much more high-powered like vanilla
 TTO/TTR can easily be achieved by tweaking the rewards within any of the
 various neighborhoods/playgrounds.
 
-Ultimately, to what degree it makes sense to cripple (or perhaps boost?) max
-laff accumulation is *wildly dependent* on what other changes are made (or not
-made) to the game.
+Ultimately, to what degree it makes sense to cripple (or perhaps boost?)
+max-laff accumulation is *wildly dependent* on what other changes are made (or
+not made) to the game.
 
-The quantity of max laff increases available from non-task sources can be
-tweaked to better match the max laff increases available from tasks, which
+The quantity of max-laff increases available from non-task sources can be
+tweaked to better match the max-laff increases available from tasks, which
 brings us to the topic of how to nerf these non-task sources if necessary.
 
-When it comes to non-task sources of max laff increases, all of them are given
+When it comes to non-task sources of max-laff increases, all of them are given
 +1 at a time, so the technique used for toontasks doesn&rsquo;t apply. Instead,
-we have two options: some (or all) of the increases granted by a given activity
-have to be removed outright, and/or an overall cap can be placed on the total
-number of max laff points that can be obtained from non-task sources.
+we have two (not mutually exclusive) options: some (or all) of the increases
+granted by a given activity have to be removed outright, and/or an overall cap
+can be placed on the total number of max-laff points that can be obtained from
+non-task sources. If we break down the non-task sources of max-laff increases,
+we see that most of them are from leveling up cog HQ suits:
+
+- +7 (fishing)
+- +5 (Sellbot HQ)
+- +5 (Cashbot HQ)
+- +5 (Lawbot HQ)
+- +5 (Bossbot HQ)
+- +4 (gardening)
+- +3 (golfing)
+- +3 (racing)
+
+Besides the obvious options that we have for each non-task source of max-laff
+increases &mdash; viz. leaving it alone, or removing all of its max-laff
+increases &mdash; we&rsquo;ll quickly consider ways of partly removing the
+max-laff increases from each source listed above. Note that one invariant that
+we maintain is always giving one of the max-laff increases as an award for
+totally maxing out the activity.
+
+- Fishing gives an odd number of max-laff increases (7), so it may make sense
+  to only award a max-laff increase every *other* time, starting with the
+  first. This would mean getting an increase for catching a total of 10, 30,
+  50, &amp; 70 species, for a total of +4 max-laff from maxing fishing. Another
+  possibility is just removing one or more of the earliest max-laff rewards,
+  e.g. removing two of them to end up with awards at 30, 40, 50, 60, &amp; 70
+  species caught, for a total of +5 max-laff from maxing fishing. Yet another
+  possibility comes from 70 being divisible by 14: awarding a max-laff increase
+  at each multiple of 14 species caught. Awards at 14, 28, 42, 56, &amp; 70
+  would place the total max-laff awarded for maxing fishing at +5.
+- Lowering the number of max-laff increases awarded by cog HQs is more
+  difficult, mostly because it is engrained in the way that cog suit promotions
+  work: at the highest-rank suit (e.g. Mr. Hollywood for Sellbot HQ), the
+  number of merits (using the term &ldquo;merit&rdquo; generically) needed to
+  achieve each successive promotion follows a vaguely [sawtooth][sawtooth]
+  pattern, with an increase in max-laff accompanying each fall. The purpose of
+  having this kind of payoff is obvious, and it only makes sense to replace any
+  removed max-laff increase with some other suitable reward. Short of changing
+  the merits-for-promotion progression itself, removing some max-laff increases
+  from cog HQs will require more creativity than is warranted in this document;
+  you might try, for example, awarding things like a single extra tree spot at
+  the toon&rsquo;s estate.
+- There are basically 4 viable options for gardening: max-laff increases at 20,
+  30, &amp; 40 species, or at 20 &amp; 40 species, or at 30 &amp; 40 species,
+  or only at 40 species.
+- Golfing and racing are similar to gardening, but with just 3 trophies to
+  choose from. Generally, you can grant max-laff increases for the
+  1<sup>st</sup> &amp; 3<sup>rd</sup>, or the 2<sup>nd</sup> &amp;
+  3<sup>rd</sup>, or the 3<sup>rd</sup> only.
+
+Note that in the case that you use one or more of these methods, it may make
+sense to replace the now-missing max-laff increases with something else to fill
+in the missing space; even just a cosmetic reward.
+
+Capping the amount of max-laff that can be obtained from non-task sources is
+fairly straightforward, except that you have to choose a particular number to
+cap at. The considerations for choosing such a number (if any) must heed the
+following considerations, in descending order of importance:
+
+- Balance against the rest of the game, including the amount of max-laff
+  available from toontasks, and general toon-cog balancing considerations.
+- Not capping so low as to make too many sources of laff useless, but also not
+  so high as to make the viability of toons in combat very reliant on doing
+  unrelated minigames like racing.
+- Aesthetic concerns about the
+  [regularity](https://en.wikipedia.org/wiki/Regular_number) of numbers used
+  (including the capping number itself, as well as the highest max-laff
+  achievable in the game).
+
+Here&rsquo;s a summary of the pros &amp; cons of stripping (some) max-laff
+awards from non-task sources, as well as the pros &amp; cons of putting an
+overall cap on the number of max-laff available from such sources (note that
+these two things are *not* mutually exclusive):
+
+##### pros (of lowering max-laff awards for non-task activities)
+
+- On its own, this technique lowers the max-laff-granting power of non-task
+  activities while keeping some incentive for each toon to do each such
+  activity.
+- On its own, this technique is not very invasive; it doesn&rsquo;t require a
+  new mechanic to be added. At its core, all that really needs to be done is
+  changing some max-laff awards from +1 to +0, or something very similar.
+- Using this technique can allow the balancing of these various activities. For
+  example, in vanilla TTO/TTR, fishing alone grants more max-laff than racing
+  &amp; golfing combined.
+
+##### cons (of lowering max-laff awards for non-task activities)
+
+- In some cases, now-missing max-laff rewards will create a void that will
+  either have to be left open, or filled with some other sort of reward.
+- In some cases, this may skew non-task activities towards power players that
+  are willing to invest the time into maxing these activities, because only
+  investing *some* time into a given activity won&rsquo;t give much (if any)
+  up-front rewards.
+
+##### pros (of capping max-laff gain attainable from non-task activities)
+
+- Skews away from excessively rewarding power players by allowing players to
+  more easily get to the laff cap without having to completely max out every
+  possible source of max-laff. It should be noted that this is much more
+  important than in TTR, because in TTR getting from 100 max-laff (no non-task
+  activities completed) to 137 max-laff (all non-task activities completed;
+  maximum possible laff) is not much of an advantage gameplay-wise. 100 laff is
+  more than enough to do even the most challenging things in TTR.
+- Allows putting a hard limit on attainable max-laff without tampering with the
+  various ways of getting it.
+
+##### cons (of capping max-laff gain attainable from non-task activities)
+
+- There is some pressure to add extra rewards (cosmetic or otherwise) to fill
+  in the &ldquo;gaps&rdquo; that are here created by refusing to award max-laff
+  to players that have already hit the cap, even though they continue to
+  achieve further progress in non-task activities. This pressure is eased by
+  &ldquo;completionist&rdquo; urges, which urge players to complete things even
+  if there is no reward <i>per se</i> for doing so. The pressure is eased as
+  well by the activities themselves being high quality, and thus motivating
+  players to do the activities for the sake of the activities themselves being
+  enjoyable.
+- Related to the previous point: placing the cap too low could make excessively
+  many sources of laff useless (or at least, less useful). A player that has
+  already reached max-laff now has less incentive to do non-task activities
+  that they haven&rsquo;t maxed out; this is trivially not the case if the cap
+  is removed, since anyone whose laff is maxed out has already maxed out all
+  activities anyways.
+- It&rsquo;s somewhat invasive; a new mechanic needs to be introduced that caps
+  the overall max-laff gain attainable from non-task sources.
 
 ### tweaking cog attacks
 
@@ -1229,3 +1359,5 @@ play still has the same friction and the problem doesn&rsquo;t really seem to
 be solved (excepting perhaps some edge cases).
 
 See the section on balancing lure mechanically for a possible solution.
+
+[sawtooth]: https://en.wikipedia.org/wiki/Sawtooth_(wave)
