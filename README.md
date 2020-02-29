@@ -40,6 +40,11 @@
             - [pros (of capping max-laff gain attainable from non-task activities)](#pros-of-capping-max-laff-gain-attainable-from-non-task-activities)
             - [cons (of capping max-laff gain attainable from non-task activities)](#cons-of-capping-max-laff-gain-attainable-from-non-task-activities)
     - [tweaking cog attacks](#tweaking-cog-attacks)
+        - [single-target vs. multi-target attacks](#single-target-vs-multi-target-attacks)
+            - [nerfing multi-target attacks directly](#nerfing-multi-target-attacks-directly)
+            - [buffing single-target attacks directly](#buffing-single-target-attacks-directly)
+            - [attack limiting](#attack-limiting)
+            - [varying target numbers](#varying-target-numbers)
 - [toontasks](#toontasks)
 - [gag tracks](#gag-tracks)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
@@ -58,12 +63,10 @@ players have shaped it. It has historically been generally wise to adapt games
 to the ways that players have intentionally adjusted them for the purpose of
 fun. This document catalogues some very concrete proposed changes that
 typically err on the side of only that which is needed to improve the game,
-rather than change the game unnecessarily or add to it. See my open letter,
-[&ldquo;On sellbot field offices (SBFOs), especially concerning the problem of
-&lsquo;difficulty&rsquo; in
-Toontown&rdquo;](https://gist.github.com/JonathanHelianthicusDoe/e5a261941bfa0f29148a6999b6ca7a65)
-if you are interested in more abstract considerations of the kind mentioned in
-this paragraph.
+rather than change the game unnecessarily or add to it. This document seeks not
+to imagine a new game, but rather to scratch the surface of an already-existing
+game (viz. Toontown) and reveal the superior game that was within it all
+along.<sup>\[1\]</sup>
 
 Some of the changes proposed here are meant to be combined with other such
 changes, but some may be designed *without* other changes in mind, for the sake
@@ -89,6 +92,13 @@ In this document, heeding these aesthetic concerns is referred to as
 &ldquo;ratio&rdquo;, and the usual sense of &ldquo;to give a rationale&rdquo;).
 Again, these concerns are always strictly secondary to the more important
 concerns of game balance &amp; fun.
+
+---
+
+1. See my open letter, [&ldquo;On sellbot field offices (SBFOs), especially
+   concerning the problem of &lsquo;difficulty&rsquo; in
+   Toontown&rdquo;][on-sbfos] if you are interested in more abstract
+   considerations of the kind mentioned in this paragraph.
 
 ### what about other (non-TTR) servers, though?
 
@@ -1190,6 +1200,131 @@ these two things are *not* mutually exclusive):
 
 ### tweaking cog attacks
 
+When it comes to tweaking cogs&rsquo; attacks, there are two main concerns that
+we want to address here: disparity between single-target and multi-target
+attacks, and the overall power level of cogs.
+
+#### single-target vs. multi-target attacks
+
+It&rsquo;s well understood in TTR that multi-target cog attacks are more
+formidable than their single-target counterparts. The reason is that
+multi-target attacks tend to do the same per-toon damage as single-target ones;
+furthermore, multi-target attacks are never &ldquo;duds&rdquo;. By
+&ldquo;dud&rdquo;, we mean attacks like the Glad Hander&rsquo;s Fountain Pen or
+the Yesman&rsquo;s Razzle Dazzle. With a multi-target attack&rsquo;s damage
+effectively being multiplied by the number of toons that it hits, the total
+damage output is much more impressive.
+
+Of course, this impressive damage being spread evenly between two or more toons
+*does* dilute its impact to some extent. But the amount of resources (in terms
+of both gag expenditure, and the number of gags in each round that have to be
+dedicated just to toonup rather than other gags) required to patch up the
+damage is definitely much higher. This imbalance may be acceptable to some
+extent; it all depends on how neck-breakingly sharp you want the variation to
+be between cog attacks, including the variation between the attacks of a given
+cog species, as well as the variation between the arsenal of different cog
+species. It also makes sense to want *some* single-target attacks to really
+&ldquo;sting&rdquo;; it really stings when a level 11 Mingler uses Paradigm
+Shift and (assuming no misses; the accuracy is 90%) dishes out a whopping
+24&nbsp;&times;&nbsp;4&nbsp;=&nbsp;96 damage! There are a number of approaches
+that can be taken here. So here are a few of them (note that none of them are
+mutually exclusive with any of the others), each accompanied by at least some
+discussion/deliberation:
+
+##### nerfing multi-target attacks directly
+
+The most obvious choice is to directly nerf multi-target attacks by tweaking
+the numbers. This further splits our options into nerfing damage and/or nerfing
+accuracy.
+
+Nerfing accuracy might *sound* like a somewhat poor idea given that it
+introduces more of the &ldquo;dumb luck&rdquo; and &ldquo;fickleness&rdquo;
+that is lamented elsewhere in this document. However, it actually turns out to
+not be that bad of an idea, for at least two reasons. First is that, unlike
+making toons&rsquo; gags more fickle, making cog attacks more fickle
+doesn&rsquo;t have the same negative impact on gameplay. When adding dumb luck
+to player-controlled elements of gameplay, it can quickly become frustrating,
+because players feel (often justifiably) that their planning &amp; actions have
+been in vain just because of some dumb luck that seems to have no purpose, no
+way of being predicted, and no way of being controlled. But when adding luck
+reliance to NPCs (adversaries, in this case), the effect is much more mild. The
+player already sees the NPCs as being somewhat opaque, so leaving their
+decisions &mdash; and the effects that they have on the game world &mdash;
+totally or partly up to chance doesn&rsquo;t necessarily make the opacity worse
+or make anything seem fickle. Indeed, the methodic use of chance is often to
+great effect whenever it makes NPCs seem more organic (although that particular
+use is not directly relevant here).
+
+The other reason that adding dumb luck to cog attacks is less of a problem here
+is that we are talking specifically about multi-target attacks, which perform
+[independent](https://en.wikipedia.org/wiki/Statistical_independence)
+[rolls](https://en.wikipedia.org/wiki/Dice) for each toon in the battle. This
+causes the number of toons that are hit (or, conversely, the number of toons
+that are missed) to be selected from a [binomial
+distribution](https://en.wikipedia.org/wiki/Binomial_distribution)
+*B*(*n*,&nbsp;*p*), where *n* is the number of toons in the battle and *p* is
+the probability of the attack hitting a given toon. Because of the [central
+limit theorem](https://en.wikipedia.org/wiki/Central_limit_theorem), this looks
+very similar to a normal distribution; particularly, with the binomial
+distribution it looks quite normal even with an *n* as low as
+*n*&nbsp;=&nbsp;4. The [variance](https://en.wikipedia.org/wiki/Variance) of
+said distribution is *np*(1&nbsp;&minus;&nbsp;*p*), so with 4 toons in the case
+of maximum variance<sup>\[1\]</sup>:
+
+*np*(1&nbsp;&minus;&nbsp;*p*)<br />
+=&nbsp;4&nbsp;&times;&nbsp;0.5(1&nbsp;&minus;&nbsp;0.5)<br />
+=&nbsp;2&nbsp;&times;&nbsp;0.5<br />
+=&nbsp;1
+
+So the expected number of toons struck is obviously 2, but with a variance (and
+therefore also [standard
+deviation](https://en.wikipedia.org/wiki/Standard_deviation), in this case) of
+&pm;1. This interval, \[1,&nbsp;3\], contains 87.5% of all
+outcomes.<sup>\[2\]</sup> And this is only the &ldquo;worst&rdquo; case; higher
+or lower values of *p* will yield smaller variances/standard deviations.
+
+As a result of this central tendency, high levels of &ldquo;dumb luck&rdquo; in
+cogs&rsquo; multi-target attacks actually doesn&rsquo;t make cogs terribly
+fickle in terms of raw damage output. That being said, there is, of course,
+more significant variation to be expected when it comes to exactly *which*
+toons are struck as *p* decreases.
+
+---
+
+1. Maximum variance occurs at *p*&nbsp;=&nbsp;0.5, because for a given *n*, the
+   variance is [proportional][proportional] to
+   *p*(1&nbsp;&minus;&nbsp;*p*)&nbsp;=&nbsp;*p*&nbsp;&minus;&nbsp;*p*<sup>2</sup>.
+   Since this is [quadratic](https://en.wikipedia.org/wiki/Quadratic_equation)
+   in *p*, the global maximum [is just where the derivative is
+   zero](https://en.wikipedia.org/wiki/Parabola). The
+   [derivative](https://en.wikipedia.org/wiki/Derivative) w.r.t. *p* is then
+   1&nbsp;&minus;&nbsp;2*p*, by the [power
+   rule](https://en.wikipedia.org/wiki/Power_rule). Finding where the
+   derivative is zero:<br />
+   1&nbsp;&minus;&nbsp;2*p*&nbsp;=&nbsp;0<br />
+   &minus;2*p*&nbsp;=&nbsp;&minus;1<br />
+   *p*&nbsp;=&nbsp;&frac12;&nbsp;=&nbsp;0.5.
+2. The [probability mass
+   function](https://en.wikipedia.org/wiki/Probability_mass_function) for a
+   particular outcome *k* over a binomial distribution
+   *X*&nbsp;~&nbsp;*B*(*n*,&nbsp;*p*) is
+   Pr(*X*&nbsp;=&nbsp;*k*)&nbsp;=&nbsp;<sub>*n*</sub>C<sub>*k*</sub>&nbsp;&times;&nbsp;*p*<sup>*k*</sup>(1&nbsp;&minus;&nbsp;*p*)<sup>*n*&minus;*k*</sup>.
+   The sum of this PMF for *k*&nbsp;&isin;&nbsp;{1,&nbsp;2,&nbsp;3} is
+   0.875&nbsp;=&nbsp;&frac78;. Note that this is not representative of
+   [approximating the binomial distribution with the normal
+   distribution](https://en.wikipedia.org/wiki/Central_limit_theorem) (where
+   &pm;&sigma; contains [roughly
+   68.3%](https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule) of the
+   outcomes) because there is no [continuity
+   correction](https://en.wikipedia.org/wiki/Continuity_correction) (and *n* is
+   small).
+
+##### buffing single-target attacks directly
+
+##### attack limiting
+
+##### varying target numbers
+
 ## toontasks
 
 <!-- garbage tasks... -->
@@ -1360,4 +1495,6 @@ be solved (excepting perhaps some edge cases).
 
 See the section on balancing lure mechanically for a possible solution.
 
+[on-sbfos]: https://gist.github.com/JonathanHelianthicusDoe/e5a261941bfa0f29148a6999b6ca7a65
 [sawtooth]: https://en.wikipedia.org/wiki/Sawtooth_(wave)
+[proportional]: https://en.wikipedia.org/wiki/Proportionality_(mathematics)
