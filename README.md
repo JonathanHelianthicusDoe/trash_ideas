@@ -1307,7 +1307,7 @@ toons are struck as *p* decreases.
 2. The [probability mass
    function](https://en.wikipedia.org/wiki/Probability_mass_function) for a
    particular outcome *k* over a binomial distribution
-   *X*&nbsp;~&nbsp;*B*(*n*,&nbsp;*p*) is
+   *X*&nbsp;&#x223c;&nbsp;*B*(*n*,&nbsp;*p*) is
    Pr(*X*&nbsp;=&nbsp;*k*)&nbsp;=&nbsp;<sub>*n*</sub>C<sub>*k*</sub>&nbsp;&times;&nbsp;*p*<sup>*k*</sup>(1&nbsp;&minus;&nbsp;*p*)<sup>*n*&minus;*k*</sup>.
    The sum of this PMF for *k*&nbsp;&isin;&nbsp;{1,&nbsp;2,&nbsp;3} is
    0.875&nbsp;=&nbsp;&frac78;. Note that this is not representative of
