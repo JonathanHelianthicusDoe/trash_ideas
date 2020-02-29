@@ -1279,15 +1279,15 @@ of maximum variance<sup>\[1\]</sup>:
 So the expected number of toons struck is obviously 2, but with a variance (and
 therefore also [standard
 deviation](https://en.wikipedia.org/wiki/Standard_deviation), in this case) of
-&pm;1. This interval, \[1,&nbsp;3\], contains 87.5% of all
-outcomes.<sup>\[2\]</sup> And this is only the &ldquo;worst&rdquo; case; higher
+&pm;1. This interval, \[1,&nbsp;3\], contains 87.5% of all result
+values.<sup>\[2\]</sup> And this is only the &ldquo;worst&rdquo; case; higher
 or lower values of *p* will yield smaller variances/standard deviations.
 
 As a result of this central tendency, high levels of &ldquo;dumb luck&rdquo; in
 cogs&rsquo; multi-target attacks actually doesn&rsquo;t make cogs terribly
 fickle in terms of raw damage output. That being said, there is, of course,
 more significant variation to be expected when it comes to exactly *which*
-toons are struck as *p* decreases.
+toons are struck, as *p* decreases.
 
 ---
 
@@ -1315,7 +1315,7 @@ toons are struck as *p* decreases.
    distribution](https://en.wikipedia.org/wiki/Central_limit_theorem) (where
    &pm;&sigma; contains [roughly
    68.3%](https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule) of the
-   outcomes) because there is no [continuity
+   result values) because there is no [continuity
    correction](https://en.wikipedia.org/wiki/Continuity_correction) (and *n* is
    small).
 
