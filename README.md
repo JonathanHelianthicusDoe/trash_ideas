@@ -1309,9 +1309,10 @@ toons are struck, as *p* decreases.
    particular outcome *k* over a binomial distribution
    *X*&nbsp;&#x223c;&nbsp;*B*(*n*,&nbsp;*p*) is
    Pr(*X*&nbsp;=&nbsp;*k*)&nbsp;=&nbsp;<sub>*n*</sub>C<sub>*k*</sub>&nbsp;&times;&nbsp;*p*<sup>*k*</sup>(1&nbsp;&minus;&nbsp;*p*)<sup>*n*&minus;*k*</sup>.
-   The sum of this PMF for *k*&nbsp;&isin;&nbsp;{1,&nbsp;2,&nbsp;3} is
-   0.875&nbsp;=&nbsp;&frac78;. Note that this is not representative of
-   [approximating the binomial distribution with the normal
+   The sum of this PMF over *k*&nbsp;&isin;&nbsp;{1,&nbsp;2,&nbsp;3}, where
+   *n*&nbsp;=&nbsp;4 and *p*&nbsp;=&nbsp;0.5, is 0.875&nbsp;=&nbsp;&frac78;.
+   Note that this is not representative of [approximating the binomial
+   distribution with the normal
    distribution](https://en.wikipedia.org/wiki/Central_limit_theorem) (where
    &pm;&sigma; contains [roughly
    68.3%](https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule) of the
