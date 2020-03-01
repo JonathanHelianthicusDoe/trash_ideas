@@ -42,6 +42,8 @@
     - [tweaking cog attacks](#tweaking-cog-attacks)
         - [single-target vs. multi-target attacks](#single-target-vs-multi-target-attacks)
             - [nerfing multi-target attacks directly](#nerfing-multi-target-attacks-directly)
+                - [pros](#pros-4)
+                - [cons](#cons-4)
             - [buffing single-target attacks directly](#buffing-single-target-attacks-directly)
             - [attack limiting](#attack-limiting)
             - [varying target numbers](#varying-target-numbers)
@@ -85,20 +87,13 @@ tendency is to favor numbers that are more &ldquo;round&rdquo; (read:
 [regular](https://en.wikipedia.org/wiki/Regular_number), or its synonym,
 5-[smooth](https://en.wikipedia.org/wiki/Smooth_number)), and to favor
 [sequences](https://en.wikipedia.org/wiki/Sequence) and mathematical
-[functions](https://en.wikipedia.org/wiki/Function_(mathematics)) that are more
+[functions][function] that are more
 [&ldquo;beautiful&rdquo;](https://en.wikipedia.org/wiki/Mathematical_beauty).
 In this document, heeding these aesthetic concerns is referred to as
 &ldquo;rationalization&rdquo; (both in the mathematical sense, from
 &ldquo;ratio&rdquo;, and the usual sense of &ldquo;to give a rationale&rdquo;).
 Again, these concerns are always strictly secondary to the more important
 concerns of game balance &amp; fun.
-
----
-
-1. See my open letter, [&ldquo;On sellbot field offices (SBFOs), especially
-   concerning the problem of &lsquo;difficulty&rsquo; in
-   Toontown&rdquo;][on-sbfos] if you are interested in more abstract
-   considerations of the kind mentioned in this paragraph.
 
 ### what about other (non-TTR) servers, though?
 
@@ -121,6 +116,20 @@ later version of the same license, at your option).
 
 [![CC BY-SA 4.0+](https://i.creativecommons.org/l/by-sa/4.0/88x31.png
 "CC BY-SA 4.0+")](https://creativecommons.org/licenses/by-sa/4.0/)
+
+---
+
+<details>
+<summary>
+footnotes for &ldquo;general attitude/philosophy (prelude)&rdquo;
+</summary>
+
+1. See my open letter, [&ldquo;On sellbot field offices (SBFOs), especially
+   concerning the problem of &lsquo;difficulty&rsquo; in
+   Toontown&rdquo;][on-sbfos] if you are interested in more abstract
+   considerations of the kind mentioned in this paragraph.
+
+</details>
 
 ## gag buffs/nerfs
 
@@ -621,10 +630,10 @@ minimum of 0 (implementation-wise there is no minimum, but it&rsquo;s easier to
 think of it as having a minimum of 0 so that you can think of `atkAcc` as just
 being the percentage chance; there&rsquo;s no material difference either way).
 
-Below are (Python) functions `ttr_clamp_acc` and `clamp_acc`, which correspond
-to TTR&rsquo;s method of clamping `atkAcc` after it is calculated as the sum of
-the four aforementioned numbers, and the proposed method of doing the same
-thing, respectively.
+Below are (Python) functions `ttr_clamp_acc` and `clamp_acc`<sup>\[1\]</sup>,
+which correspond to TTR&rsquo;s method of clamping `atkAcc` after it is
+calculated as the sum of the four aforementioned numbers, and the proposed
+method of doing the same thing, respectively.
 
 ```python
 def ttr_clamp_acc(atkAcc):
@@ -636,15 +645,6 @@ def clamp_acc(atkAcc):
     else:
         return min(95 + (atkAcc - 95) / 10, 100)
 ```
-
-<details>
-<summary>minor note</summary>
-
-Python doesn&rsquo;t have types, but it does have data types, and the above two
-functions have different return (data) types, namely
-`ttr_clamp_acc: int -> int` and `clamp_acc: int -> (int | float)`. But really,
-it doesn&rsquo;t matter&hellip; just be sure not to somehow trip on that.
-</details>
 
 The tweakable parameter of `clamp_acc` is the `10` that shows up in its
 definition. `10` is a convenient number because it gives what I think is a
@@ -670,6 +670,21 @@ the left). The magic number here is thus 145, because it is exactly when
   could be a con.
 - Allowing accuracy to possibly reach 100% could be seen as overly rigid or
   deterministic(&#x203d;)
+
+---
+
+<details>
+<!-- markdownlint-disable MD033 -->
+<summary>footnotes for &ldquo;<code>atkAcc</code> clamping&rdquo;</summary>
+<!-- markdownlint-enable MD033 -->
+
+1. Python doesn&rsquo;t have types, but it does have data types, and these two
+   functions have different return (data) types, namely
+   `ttr_clamp_acc: int -> int` and `clamp_acc: int -> (int | float)`. But
+   really, it doesn&rsquo;t matter&hellip; just be sure not to somehow trip on
+   that.
+
+</details>
 
 ## facilities
 
@@ -1289,7 +1304,63 @@ fickle in terms of raw damage output. That being said, there is, of course,
 more significant variation to be expected when it comes to exactly *which*
 toons are struck, as *p* decreases.
 
+When deciding to nerf multi-target attacks directly, the following pros and
+cons of nerfing the accuracy (by itself) should be taken into consideration,
+although do note that nerfing damage and nerfing accuracy are not mutually
+exclusive:
+
+Pros of nerfing accuracy in particular:
+
+- Less revisionist in some sense, because you can nerf accuracy without
+  actually changing the observed effects of toons being struck by said attacks.
+- Makes multi-target attacks less disruptive without actually changing the
+  particular number of laff points required to survive a particular barrage of
+  cog attack(s). This makes cog attacks *basically* just as deadly overall,
+  while being significantly less of a drain on toon resources.
+
+Cons of nerfing accuracy in particular:
+
+- Less deterministic. This is mostly a problem in dire situations, where the
+  lowered likelihood of a cog making you go sad might be nice &mdash; but
+  hardly a guarantee or reassurance. However, it should be noted that although
+  multi-target attacks are generally more powerful than the corresponding
+  multi-target ones in TTR, the *per-toon* damage is typically roughly the
+  same, so this point applies to essentially any cog attack with an accuracy
+  that is &ldquo;significantly&rdquo; less than 100%.
+- Because *only* nerfing accuracy keeps cog attacks at basically the same level
+  of deadliness, this form of nerf is not as effective when reduced access to
+  laff points is what demands the nerf.
+
+And now, we will take a look at the pros and cons of nerfing multi-target
+attacks directly, on its own:
+
+###### pros
+
+- Weakens cogs. This can be a good thing when it&rsquo;s warranted, due to cogs
+  being too powerful in comparison to toons.
+- Not very invasive; all that need to be tweaked are damage and/or accuracy
+  numbers.
+- Can be an effective way of balancing single-target and multi-target cog
+  attacks.
+
+###### cons
+
+- Weakens cogs. This can be a bad thing when it&rsquo;s unwarranted, due to
+  cogs already being as powerful as, or less powerful than, toons.
+- Revisionist towards the set of cog attacks that exist in TTR, because the
+  attacks themselves have to be modified.
+- This method requires some meticulousness, because all cogs with multi-target
+  attacks have to be balanced, against themselves and against all other cogs of
+  a similar level. This includes balancing the damage/accuracy values for the
+  attack *at each cog level* (of which there are 5 for a given cog species),
+  for each such attack.
+
 ---
+
+<details>
+<summary>
+footnotes for &ldquo;nerfing multi-target attacks directly&rdquo;
+</summary>
 
 1. Maximum variance occurs at *p*&nbsp;=&nbsp;0.5, because for a given *n*, the
    variance is [proportional][proportional] to
@@ -1319,6 +1390,8 @@ toons are struck, as *p* decreases.
    result values) because there is no [continuity
    correction](https://en.wikipedia.org/wiki/Continuity_correction) (and *n* is
    small).
+
+</details>
 
 ##### buffing single-target attacks directly
 
@@ -1496,6 +1569,7 @@ be solved (excepting perhaps some edge cases).
 
 See the section on balancing lure mechanically for a possible solution.
 
+[function]: https://en.wikipedia.org/wiki/Function_(mathematics)
 [on-sbfos]: https://gist.github.com/JonathanHelianthicusDoe/e5a261941bfa0f29148a6999b6ca7a65
 [sawtooth]: https://en.wikipedia.org/wiki/Sawtooth_(wave)
 [proportional]: https://en.wikipedia.org/wiki/Proportionality_(mathematics)
