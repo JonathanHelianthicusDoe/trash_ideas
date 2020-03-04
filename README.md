@@ -48,7 +48,11 @@
                 - [pros](#pros-5)
                 - [cons](#cons-5)
             - [attack limiting](#attack-limiting)
+                - [pros](#pros-6)
+                - [cons](#cons-6)
             - [varying target numbers](#varying-target-numbers)
+                - [pros](#pros-7)
+                - [cons](#cons-7)
 - [toontasks](#toontasks)
 - [gag tracks](#gag-tracks)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
@@ -1447,7 +1451,109 @@ footnotes for &ldquo;buffing single-target attacks directly&rdquo;
 
 ##### attack limiting
 
+Now we are brought to options more &ldquo;radical&rdquo; than just changing
+some of the numbers, by introducing additional mechanic(s): first, attack
+limiting. The basic idea is to treat cogs slightly more like toons, in that
+they will have *some* attacks in limited quantity, just like toons can only
+carry e.g. 3 Birthday Cakes. It should be noted that attack limiting is
+discussed here as a way of balancing multi-target cog attacks against
+single-target ones, but is actually potentially more useful. Attack limiting
+can act as a general strategy to be used for game-balancing, as well as a way
+to simply make cog fights more interesting.
+
+It doesn&rsquo;t really make sense to allow cogs to run out of attacks
+entirely, lest we fall into the trap of making cogs mirror toons for no other
+reason than &ldquo;symmetry&rdquo; for its own sake; some asymmetry between
+toons and cogs is intentional and beneficial to the game&rsquo;s design.
+Rather, when applying attack limiting, it is expected that each cog species
+will possess at least one attack that is unlimited in use.
+
+Attack limiting should not break in the presence of v2.0 cogs or similar. If,
+for example, a v2.0 cog has a one-time-only attack and uses it, and then has
+their first shell defeated, their skelecog form should not be able to use that
+attack.
+
+The main issue left to hash out here (short of actually proposing a particular
+attack limiting scheme for every cog species) is the issue of which numbers it
+makes sense to use. Generally, it is expected that any limit greater than 3 or
+so is not going to be very useful, because cogs are not expected to last very
+long on the battlefield and perform a lot of attacks. Limits greater than 3 are
+going to make the attack *effectively* unlimited most of the time in practice,
+and even a limit of 3 on a single attack is probably pretty high. Again, it
+depends on how you choose to balance the rest of the game as to how many
+attacks you expect cogs to actually be able to perform in various situations.
+Additionally, the effects of an attack being limited are dependent on the
+probability of that attack occuring in general; an attack that is limited to
+one time only, but has a 10% usage chance, is only *somewhat* limited by the
+one-time-only bit. In general, most attacks that are limited should be limited
+to either 1 or 2.
+
+It *is* possible to slightly extend this concept by pooling some of the attacks
+that a given cog species has into a group, and then putting a limit on that
+group, rather than a separate limit for each attack in the group. However, this
+complicates things considerably for no apparent benefit. Potentially, this is
+useful when a cog has many attacks in their arsenal and you want to limit the
+use of any of those attacks that aren&rsquo;t a particular one or two of them,
+but that seems like a niche usecase. Any other benefits are a mystery as of
+yet.
+
+###### pros
+
+- Weakens cogs (usually). This can be a good thing when it is warranted due to
+  cogs being too powerful in comparison to toons.
+- Doesn&rsquo;t require revising attacks; the attacks stay the same, and
+  cogs&rsquo; use of them is what changes.
+- Makes cog behavior somewhat more deterministic, in a way that toons can
+  strategize around (viz. it is possible to know that a cog has exhausted some
+  attack and cannot use it again).
+- Flexible &amp; multi-purpose.
+
+###### cons
+
+- Weakens cogs (usually). This can be a bad thing when it is unwarranted due to
+  cogs already being as powerful as, or less powerful than, toons.
+- Invasive, because a new mechanic must be added into the game, which
+  complicates the game&rsquo;s mechanics.
+- This method requires some meticulousness, because any cog attack by any cog
+  species is potentially the subject of attack limiting.
+
 ##### varying target numbers
+
+Toying around with exactly how many toons can be hit by a given multi-target
+cog attack is a possibility. The obvious way to do this is to set the (maximum)
+number of targets for each of a species&rsquo;s multi-target attacks on a
+per-attack-per-level basis, or just on the somewhat coarser per-attack basis.
+
+Balancing on the level of target count could allow for more fine-grained
+balance adjustments. It also could make the cog aggro mechanic more relevant
+and a bigger part of toon strategy, because normally multi-target attacks
+ignore aggro since they don&rsquo;t have to make any choice as to which toon to
+target. On the other hand, while this is interesting, it is the most invasive
+of all suggestions here in lieu of balancing multi-target vs. single-target
+attacks.
+
+###### pros
+
+- Weakens cogs. This can be a good thing when it is warranted due to cogs being
+  too powerful in comparison to toons.
+- Can be an effective way of balancing single-target and multi-target cog
+  attacks.
+- Makes the cog aggro mechanic more relevant by making multi-target attacks
+  possibly rely on aggro in terms of which toons they target.
+
+###### cons
+
+- Weakens cogs. This can be a bad thing when it is unwarranted due to cogs
+  already being as powerful as, or less powerful than, toons.
+- By far the most invasive method listed in this section. This is presumably
+  *very* difficult to implement properly, since it requires messing with cog
+  attack animations.
+- This method requires some meticulousness, because all cogs with multi-target
+  attacks have to be balanced, against themselves and against all other cogs of
+  a similar level. This includes balancing the target count values for the
+  attack *at each cog level* (of which there are 5 for a given cog species),
+  for each such attack. Less demanding is setting the target count values on a
+  per-species-per-attack basis rather than *also* varying by cog level.
 
 ## toontasks
 
