@@ -45,6 +45,8 @@
                 - [pros](#pros-4)
                 - [cons](#cons-4)
             - [buffing single-target attacks directly](#buffing-single-target-attacks-directly)
+                - [pros](#pros-5)
+                - [cons](#cons-5)
             - [attack limiting](#attack-limiting)
             - [varying target numbers](#varying-target-numbers)
 - [toontasks](#toontasks)
@@ -1336,8 +1338,8 @@ attacks directly, on its own:
 
 ###### pros
 
-- Weakens cogs. This can be a good thing when it&rsquo;s warranted, due to cogs
-  being too powerful in comparison to toons.
+- Weakens cogs. This can be a good thing when it is warranted due to cogs being
+  too powerful in comparison to toons.
 - Not very invasive; all that need to be tweaked are damage and/or accuracy
   numbers.
 - Can be an effective way of balancing single-target and multi-target cog
@@ -1345,8 +1347,8 @@ attacks directly, on its own:
 
 ###### cons
 
-- Weakens cogs. This can be a bad thing when it&rsquo;s unwarranted, due to
-  cogs already being as powerful as, or less powerful than, toons.
+- Weakens cogs. This can be a bad thing when it is unwarranted due to cogs
+  already being as powerful as, or less powerful than, toons.
 - Revisionist towards the set of cog attacks that exist in TTR, because the
   attacks themselves have to be modified.
 - This method requires some meticulousness, because all cogs with multi-target
@@ -1394,6 +1396,54 @@ footnotes for &ldquo;nerfing multi-target attacks directly&rdquo;
 </details>
 
 ##### buffing single-target attacks directly
+
+The considerations for buffing single-target cog attacks directly are largely
+similar to (or rather, inverse to) the considerations for nerfing multi-target
+ones. One notable difference is that changing accuracy values is no longer
+really an option here; most cog attacks (especially those from cogs that are a
+high level for their species<sup>\[1\]</sup>) have accuracy reasonably close to
+100% anyways, and single-target attacks are not affected by accuracy changes in
+the same way as their multi-target counterparts.
+
+It should also be noted that buffing single-target cog attacks has the effect
+of raising the threshold for how much laff a toon needs to have left to
+withstand a given number of cog attacks. This is not necessarily the case when
+tampering with multi-target attacks.
+
+So let&rsquo;s take a look at the pros and cons of buffing single-target cog
+attacks directly, on its own:
+
+###### pros
+
+- Strengthens cogs. This can be a good thing when it is warranted due to cogs
+  being less powerful than toons.
+- Not very invasive; all that need to be tweaked are damage numbers.
+- Can be an effective way of balancing single-target and multi-target cog
+  attacks.
+
+###### cons
+
+- Strengthens cogs. This can be a bad thing when it is unwarranted due to cogs
+  already being as powerful as, or more powerful than, toons.
+- Revisionist towards the set of cog attacks that exist in TTR, because the
+  attacks themselves have to be modified.
+- This method requires some meticulousness, because all cogs have to be
+  balanced, against themselves and against all other cogs of a similar level.
+  This includes balancing the damage values for the attack *at each cog level*
+  (of which there are 5 for a given cog species), for each such single-target
+  attack.
+
+---
+
+<details>
+<summary>
+footnotes for &ldquo;buffing single-target attacks directly&rdquo;
+</summary>
+
+1. &ldquo;Species&rdquo; here refers to particular named species, like
+   Telemarketer or Corporate Raider.
+
+</details>
 
 ##### attack limiting
 
