@@ -1557,7 +1557,88 @@ attacks.
 
 ## toontasks
 
-<!-- garbage tasks... -->
+Many &ldquo;generic&rdquo;/&ldquo;randomly generated&rdquo; toontasks are
+excessively difficult in comparison to other tasks available in their stead,
+for the same reward. The infamous tasks like &ldquo;defeat 200 5+ story cog
+buildings&rdquo; obviously fall into this category, but so do many others. In
+many cases it&rsquo;s unclear why the tasks exist in the first place, other
+than perhaps as a cruel practical joke played on those who accidentally accept
+them. In other cases, the tasks just need to be a bit more balanced to be in
+line with other comparable tasks with the same reward.
+
+This calls for some adjustment of the random task generation algorithm.
+Toontasks need not be extremely balanced; balancing them with one another is
+not a huge part of improving the game, and some variation in balance is
+acceptable, because different toons will have different preferences and
+priorities at different times. Additionally, super difficult tasks (like our
+infamous example of &ldquo;defeat 200 5+ story cog buildings&rdquo;) need not
+be removed entirely, so long as one is willing to invent new rewards, e.g.
+15000 jellybeans, or perhaps a *permanent* goofy cosmetic effect to add to
+one&rsquo;s cosmetic effect inventory, to be used at any time (like clothing in
+one&rsquo;s wardrobe).
+
+Probably the easiest way to come up with a reasonably fair algorithm is by
+assigning point values to objectives (and modifiers thereof). Also, point
+values have to be determined for particular rewards; not just assigned to the
+reward itself, but to the combination of the reward with the chapter that it
+belongs to (e.g. Daisy Gardens, or Donald&rsquo;s Dreamland II). Then, when
+randomly generating a task for a particular reward, one simply chooses some
+sensical assortment (for example, it doesn&rsquo;t make sense to have to defeat
+5 4+ story coin mints&hellip;) and adds together their point values. Then, one
+divides the point value of the reward by this sum, and rounds to the nearest
+integer (to a minimum of 1). This will give the number of times that the
+objective has to be acquired/completed/defeated/&amp;c.
+
+Here, we will try to devise one such point-based scheme, although this is only
+a suggestion/demonstration. We will start first with assigning point values to
+requirements. Also note that the code snippets are in Python:
+
+| requirement                                                                                      | points                               |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| cog defeated                                                                                     | 10                                   |
+| cog is at least level `n`, in no particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup> | `32 // (13 - n) - 1`<sup>\[3\]</sup> |
+| cog is at least level `n`, in a particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup>  | 4                                    |
+| cog must be at least level 11                                                                    | 5                                    |
+| cog must be at least level 12                                                                    | 14                                   |
+| cog must be v2.0, in no particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup>          | 35                                   |
+| cog must be v2.0, in a particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup>           | 15                                   |
+| cog of a particular type<sup>\[4\]</sup>, in no particular facility<sup>\[2\]</sup>              | 12                                   |
+| cog defeated within a particular area<sup>\[1\]</sup>                                            | 6                                    |
+| cog defeated in a particular facility<sup>\[2\]</sup>                                            | 15                                   |
+| cog must be of a particular species<sup>\[5\]</sup>, in no particular facility<sup>\[2\]</sup>   | 40                                   |
+| cog must be of a particular species<sup>\[5\]</sup>, in a particular facility<sup>\[2\]</sup>    | 15                                   |
+| building defeated                                                                                | 60                                   |
+| building must be at least `n` floors                                                             | `15 * (n**2 + n - 2)`                |
+| building of a particular type<sup>\[4\]</sup> (minimum floor count of `n`)                       | `75 * n`                             |
+| building within a particular area<sup>\[1\]</sup> (minimum floor count of `n`)                   | `45 * n`                             |
+| factory defeated                                                                                 | 360                                  |
+
+There are some subtleties here, many of which are captured by the expectations
+already set forth by TTO. For example, tasks requiring cogs of a particular
+species *and* a certain minimum level should be avoided so as to not
+effectively double-count points; this kind of task doesn&rsquo;t exist in
+TTO/TTR anyways. One of the nice things is that this kind of scheme is quite
+flexible; it can be tweaked as needed to generate better tasks, as one sees
+fit.
+
+---
+
+<details>
+<summary>footnotes for &ldquo;toontasks&rdquo;</summary>
+
+1. &ldquo;Area&rdquo; here refers to a playground (Toontown Central,
+   Donald&rsquo;s Dock, &amp;c.) or cog HQ (Sellbot HQ, Cashbot HQ, &amp;c.).
+   It does not refer to more specific areas like a cog building or bullion
+   mint.
+2. &ldquo;Facility&rdquo; here refers to a location that is more specific than
+   an &ldquo;area&rdquo;, like a cog building or bullion mint.
+3. This formula only works if the maximum cog level is 12.
+4. &ldquo;Type&rdquo; here refers to the four types sellbot, cashbot, lawbot,
+   &amp; bossbot.
+5. &ldquo;Species&rdquo; here refers to particular named species, like
+   Telemarketer or Corporate Raider.
+
+</details>
 
 ## gag tracks
 
