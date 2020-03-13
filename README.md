@@ -4,6 +4,7 @@
 
 - [general attitude/philosophy (prelude)](#general-attitudephilosophy-prelude)
     - [what about other (non-TTR) servers, though?](#what-about-other-non-ttr-servers-though)
+    - [contributing](#contributing)
     - [legal](#legal)
 - [gag buffs/nerfs](#gag-buffsnerfs)
     - [toonup](#toonup)
@@ -112,6 +113,15 @@ instead focuses on TTR-as-essentially-TTO, that is, the &ldquo;base game&rdquo;
 in more or less the same state gameplay-wise as TTO in 2013. This acts as a
 starting point, or even <i>tabula rasa</i> (a <i>tabula rasa</i> that, like a
 newborn human mind, is not really a &ldquo;blank&rdquo; slate at all&hellip;).
+
+### contributing
+
+Suggestions/corrections/additions/typo-fixes/&amp;c. are *encouraged*. You can
+file an issue and/or submit a pull request and/or [contact me
+directly](https://zz.nfshost.com/contact.html).
+
+By contributing, you agree to license your contributions under the same license
+as this work (see the &ldquo;legal&rdquo; section).
 
 ### legal
 
@@ -1612,6 +1622,7 @@ requirements. Also note that the code snippets are in Python:
 | building of a particular type<sup>\[4\]</sup> (minimum floor count of `n`)                       | `75 * n`                             |
 | building within a particular area<sup>\[1\]</sup> (minimum floor count of `n`)                   | `45 * n`                             |
 | factory defeated                                                                                 | 360                                  |
+| &hellip;                                                                                         | &hellip;                             |
 
 There are some subtleties here, many of which are captured by the expectations
 already set forth by TTO. For example, tasks requiring cogs of a particular
