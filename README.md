@@ -151,7 +151,7 @@ footnotes for &ldquo;general attitude/philosophy (prelude)&rdquo;
 
 ### toonup
 
-Balancing toonup gags is a bit of a different beast than balancing any of the
+Balancing toonup gags is a bit of a different beast from balancing any of the
 other six tracks; rather than balancing the tracks against themselves, toonup
 is fundamentally different and can only be balanced from a perspective that
 includes not just the HP of cogs, but also the attacking power of cogs and the
@@ -1597,7 +1597,11 @@ sensical assortment (for example, it doesn&rsquo;t make sense to have to defeat
 5 4+ story coin mints&hellip;) and adds together their point values. Then, one
 divides the point value of the reward by this sum, and rounds to the nearest
 integer (to a minimum of 1). This will give the number of times that the
-objective has to be acquired/completed/defeated/&amp;c.
+objective has to be acquired/completed/defeated/&amp;c. It is probably worth
+checking the &ldquo;error&rdquo; term here, that is, how much you have to round
+off as a portion of the rounded-off value (or the original value). Error terms
+too large may be unacceptable, in which case such results should be
+discarded/avoided.
 
 Here, we will try to devise one such point-based scheme, although this is only
 a suggestion/demonstration. We will start first with assigning point values to
@@ -1612,6 +1616,7 @@ requirements. Also note that the code snippets are in Python:
 | cog must be at least level 12                                                                    | 14                                   |
 | cog must be v2.0, in no particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup>          | 35                                   |
 | cog must be v2.0, in a particular area<sup>\[1\]</sup> and/or facility<sup>\[2\]</sup>           | 15                                   |
+| cog must be a skelecog                                                                           | 9                                    |
 | cog of a particular type<sup>\[4\]</sup>, in no particular facility<sup>\[2\]</sup>              | 12                                   |
 | cog defeated within a particular area<sup>\[1\]</sup>                                            | 6                                    |
 | cog defeated in a particular facility<sup>\[2\]</sup>                                            | 15                                   |
@@ -1621,7 +1626,20 @@ requirements. Also note that the code snippets are in Python:
 | building must be at least `n` floors                                                             | `15 * (n**2 + n - 2)`                |
 | building of a particular type<sup>\[4\]</sup> (minimum floor count of `n`)                       | `75 * n`                             |
 | building within a particular area<sup>\[1\]</sup> (minimum floor count of `n`)                   | `45 * n`                             |
-| factory defeated                                                                                 | 360                                  |
+| factory defeated                                                                                 | 350                                  |
+| mint (no particular type) defeated                                                               | 470                                  |
+| coin mint defeated                                                                               | 500                                  |
+| dollar mint defeated                                                                             | 750                                  |
+| bullion mint defeated                                                                            | 950                                  |
+| DA office (no particular type) defeated                                                          | 510                                  |
+| DA office A defeated                                                                             | 540                                  |
+| DA office B defeated                                                                             | 760                                  |
+| DA office C defeated                                                                             | 1000                                 |
+| DA office D defeated                                                                             | 1200                                 |
+| cog golf course (no particular type) defeated                                                    | 550                                  |
+| front 3 defeated                                                                                 | 580                                  |
+| middle 6 defeated                                                                                | 1200                                 |
+| back 9 defeated                                                                                  | 1800                                 |
 | &hellip;                                                                                         | &hellip;                             |
 
 There are some subtleties here, many of which are captured by the expectations
