@@ -56,6 +56,8 @@
                 - [cons](#cons-7)
 - [toontasks](#toontasks)
 - [gag tracks](#gag-tracks)
+    - [starting gag tracks](#starting-gag-tracks)
+- [odds &amp; ends](#odds-amp-ends)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
 
@@ -1671,7 +1673,85 @@ fit.
 
 ## gag tracks
 
-<!-- ... -->
+Just to recap how the acquisition of gag tracks works in TTO/TTR:
+
+1. You start the game with throw **AND** squirt. (2 tracks total)
+2. After completing Toontown Central, you gain toonup **XOR** sound, at your
+   choice. (3 tracks total)
+3. After completing Donald&rsquo;s Dock, you gain drop **XOR** lure, at your
+   choice. (4 tracks total)
+4. After completing Daisy Gardens and Minnie&rsquo;s Melodyland, you gain trap
+   **XOR** (whichever track you didn&rsquo;t get from Toontown Central), at
+   your choice. (5 tracks total)
+5. After completing The Brrrgh, you gain exactly one of the two tracks that you
+   are still missing, at your choice. (6 tracks total)
+
+So, by the time that you&rsquo;ve finished The Brrrgh, you have all of the gag
+tracks except for one, and you have some choice of which one you are missing.
+Notice the wording of &ldquo;*some* choice&rdquo;, since you cannot choose to
+have all 6 tracks except for throw, and you also cannot choose to have all 6
+tracks except for squirt.
+
+Also somewhat strange is the way that you start the game. Having completed
+exactly 0 playgrounds, you have access to 2 gag tracks; having completed 5
+playgrounds, you have access to 6 gag tracks. This isn&rsquo;t
+&ldquo;strange&rdquo; <i>per se</i>, since it just means giving players a big
+head-start on their gag tracks: if completing 5 playgrounds gets you from 2
+tracks to 6 tracks, then each playground is worth something like
+(6&nbsp;&minus;&nbsp;2)/5&nbsp;=&nbsp;0.8 gag tracks, and yet you start the
+game (0 playgrounds completed) with 2 gag tracks.
+
+Furthermore, needing to complete Daisy Gardens *and* Minnie&rsquo;s Melodyland
+to get your fifth track is also a bit odd, when otherwise only a single
+playground is needed to acquire a new track. In TTO/TTR, the excuse here is
+basically that Daisy Gardens has the first cog HQ taskline. Each of the four
+cog HQs has its own taskline, and the two &ldquo;easiest&rdquo; HQs (sellbot
+and cashbot) have tasklines associated with the playgrounds that they are
+connected to (Daisy Gardens and Donald&rsquo;s Dreamland, respectively). By
+&ldquo;associated with&rdquo;, it is meant that these cog HQ tasklines are
+encountered in those particular associated playgrounds at the places within the
+main taskline&rsquo;s progression that those playgrounds occupy. The taskline
+progresses from Toontown Central, to Donald&rsquo;s Dock, to Daisy Gardens, to
+Minnie&rsquo;s Melodyland, to The Brrrgh, to Donald&rsquo;s Dreamland. This
+progression is reflected by the increasing difficulty of the streets (that is,
+the cogs roaming the streets and the cog buildings on those streets) in those
+playgrounds. This works out nicely, since you have 4 total gag tracks to gain
+(going from 2 to 6 gag tracks), and 6 playgrounds. So, 4 of those playgrounds
+give gag tracks, and the other 2 are each dedicated to a cog HQ taskline. The
+odd bit is that the sellbot HQ taskline is actually not necessary; it exists
+only to introduce players to the concept of cog HQs, rather than to grant a cog
+HQ disguise/suit (since a sellbot disguise is obtained by just completing 10
+factories, no task needed). Furthermore, it interrupts the flow of gaining gag
+tracks. *Neither* of these idiosyncrasies apply to Donald&rsquo;s Dreamland,
+which also does not award any gag tracks.
+
+While these idiosyncrasies of how TTO/TTR handles gag track acquisition make
+some good sense within the context of TTO/TTR, they also leave room for changes
+that make good sense as well. And, within the context of some of the changes
+proposed in this document (e.g. gag track balancing and changes to laff limits
+on facilities), it may make even more sense to change gag track acquisition
+away from the TTO/TTR approach.
+
+When thinking about changes to gag track acquisition, we want to consider how
+we can improve the players&rsquo; freedom. Like with considerations on the
+subject of laff limits, we have to accept that allowing more flexibility in the
+game (rather than less) is ultimately beneficial, and that any time that
+players are clearly stripped of that flexibility, they will often (when
+possible) find ways around it. Hence, the existence of uber toons, semi toons,
+reverse uber toons, cashbot uber toons, boss runs with artificially limited
+numbers of participants, &amp;c.
+
+### starting gag tracks
+
+Clearly, toons must hvae the option to start the game with at least one gag
+track. But should the maximum number of starting tracks be 2, like in TTO/TTR?
+And, regardless of that number, how much freedom should toons have in choosing
+the gag track(s) that they start with?
+
+## odds &amp; ends
+
+This section is dedicated to other thoughts and proposed changes that have
+little or nothing to do with the core *mechanics* of the game.
 
 ## appendix (a.k.a. random garbage)
 
