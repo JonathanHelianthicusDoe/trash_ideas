@@ -1743,7 +1743,7 @@ numbers of participants, &amp;c.
 
 ### starting gag tracks
 
-Clearly, toons must hvae the option to start the game with at least one gag
+Clearly, toons must have the option to start the game with at least one gag
 track. But should the maximum number of starting tracks be 2, like in TTO/TTR?
 And, regardless of that number, how much freedom should toons have in choosing
 the gag track(s) that they start with?
