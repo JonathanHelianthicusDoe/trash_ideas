@@ -57,6 +57,12 @@
 - [toontasks](#toontasks)
 - [gag tracks](#gag-tracks)
     - [starting gag tracks](#starting-gag-tracks)
+        - [maximum of 1 gag track at toon creation](#maximum-of-1-gag-track-at-toon-creation)
+            - [pros](#pros-8)
+            - [cons](#cons-8)
+        - [maximum of 2 gag tracks at toon creation](#maximum-of-2-gag-tracks-at-toon-creation)
+            - [pros](#pros-9)
+            - [cons](#cons-9)
 - [odds &amp; ends](#odds-amp-ends)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
@@ -1747,6 +1753,114 @@ Clearly, toons must have the option to start the game with at least one gag
 track. But should the maximum number of starting tracks be 2, like in TTO/TTR?
 And, regardless of that number, how much freedom should toons have in choosing
 the gag track(s) that they start with?
+
+When it comes to how much freedom that toons should have in the gag track(s)
+that they start with, it is pretty straightforward to argue that the freedom
+should be total, given the principles under consideration here. That is, any
+time a gag track is chosen at toon creation, it should be chosen from a
+selection of all 7 gag tracks (barring any tracks already chosen, of course).
+If you go the TTO/TTR route and restrict what gag tracks toons start with, they
+will find ways to circumvent that anyways &mdash; there are plenty of throwless
+and/or squirtless toons in TTR. So, not only is this a pretty unnecessary
+restriction of the freedom that players have in building their toons, but it
+also is a pointless restriction, in that it can be somewhat easily bypassed.
+
+The same reasoning suggests that, regardless of what maximum we place on the
+number of tracks that a toon can start the game with, the *minimum* number of
+such tracks should be zero. This may seem a little odd in the sense that it may
+seem to encourage (or at least, sanction) reverse ubers (or at least, toons
+that are completely helpless for the entire time until they get a gag track).
+The reality, however, is that reverses (and 0-track ubers, for that matter) can
+be made anyways; there are even several of them in TTR that have the maximum
+attainable laff (137 at the time of writing). All that is really needed is a
+warning sign that shows up any time that a player is electing to start with
+zero gag tracks, saying something to the effect of: &ldquo;Are you sure you
+want to start the game with no gag tracks? It&rsquo;s going to be a rough life!
+The Cogs don&rsquo;t respond well to the persuasive words of
+Toons&hellip;&rdquo;. Not terribly relevant, but also worth noting, is that not
+all gagless toons are *necessarily* either reverses or 0-track ubers &mdash;
+they could just be toons that never plan on fighting Cogs! There are other
+activities to do in Toontown, of course.
+
+When it comes to a *maximum* number of starting gag tracks, things get a little
+messier. It depends pretty strongly on how the rest of the game is designed
+(c.f. the other sections of this document). For the most part, the numbers that
+we are here deciding between are probably just 1 and 2. Obviously anything
+lower than 1 is nonsense, and while 3, 4, 5, and 6 are all *probably* viable in
+some cases, in most cases that likely makes toons excessively powerful from the
+get-go and pretty severely dampens the sense of progression as the number
+grows. The sense of progression being dampened by a higher maximum number of
+starting gag tracks is due to the obvious reason that you have less milestones
+along the main taskline (since the main taskline gives you fewer gag tracks),
+especially because said milestones *would* represent spikes in power.
+
+#### maximum of 1 gag track at toon creation
+
+##### pros
+
+- If sticking with an endgame maximum of 6 gag tracks: Fits more nicely with
+  the existence of the Daisy Gardens main taskline, in the sense that Daisy
+  Gardens could then award a gag track (like Toontown Central, Donald&rsquo;s
+  Dock, Minnie&rsquo;s Melodyland, &amp; The Brrrgh). This can also be used to
+  help with the concerns discussed in the &ldquo;limiting laff&rdquo; section
+  if one sees fit, since some or all of the Daisy Gardens tasks that award
+  max-laff in TTO/TTR could be replaced with gag track frame tasks instead.
+- If setting an endgame maximum of 5 gag tracks: Allows you to preserve the
+  TTR/TTO taskline and still end up with 5 gag tracks (maximum) after finishing
+  The Brrrgh.
+- Makes toons overall less powerful, up until they get their last gag track.
+  This could be a pro.
+- Given a certain endgame maximum number of gag tracks, starting with 1 track
+  increases the sense of progression over starting with 2 tracks.
+
+##### cons
+
+- Kind of a rough start to not be able to pair your chosen gag track with at
+  least one other track! For some choices (viz. toonup, lure, &amp; trap), it
+  becomes straight-up impossible to solo even the easiest cog battle. Also
+  notable is that trap is doubly useless, simply because it relies on someone
+  else having picked lure, which is somewhat unlikely if you are mostly playing
+  with other toons who also have just 1 gag track. Starting with a maximum of 1
+  gag track at toon creation is nigh begging players to shoot themselves in the
+  feet.
+- If sticking with an endgame maximum of 6 gag tracks: More revisionist because
+  you have to implement another gag track acquisition taskline (presumably in
+  Daisy Gardens), which is not only revisionist but also potentially more
+  difficult to implement (depending on how you go about it).
+- Makes toons overall less powerful, up until they get their last gag track.
+  This could be a con.
+
+#### maximum of 2 gag tracks at toon creation
+
+##### pros
+
+- Much more flexible than starting with a maximum of 1 track, since for any
+  chosen track you can freely pick from 6 other tracks in a way that makes your
+  first choice more viable. As mentioned above, trap is a clear loser in the
+  &ldquo;pick exactly one track to start the game with&rdquo; game, but here
+  some sense can be made by *also* choosing lure (so that you can lure for your
+  own traps) or choosing something particularly versatile, like throw, or
+  squirt, or drop, or sound.
+- If sticking with an endgame maximum of 6 gag tracks: This is the least
+  revisionist option, since neither the maximum number of starting tracks nor
+  the maximum possible number of gag tracks are changed from TTO/TTR (although
+  you get more choice, of course).
+- Makes toons overall more powerful, up until they get their last gag track.
+  This could be a pro.
+
+##### cons
+
+- Makes toons overall more powerful, up until they get their last gag track.
+  This could be a con.
+- If setting an endgame maximum of 5 gag tracks: This is very difficult
+  taskline-wise and progression-wise. In the main taskline you will have to
+  remove the gag track reward from one of the playgrounds (so that Daisy
+  Gardens, Donald&rsquo;s Dreamland, *and* 1 other playground all do not award
+  gag tracks). Progression-wise, this guts the sense of progression to be even
+  less rewarding than your standard TTO/TTR. From toon creation to the very end
+  of the main taskline, you have only acquired a total of 3 gag tracks.
+- If setting an endgame maximum of 6 gag tracks: Continues to leave the Daisy
+  Gardens taskline barren of gag track acquisition.
 
 ## odds &amp; ends
 
