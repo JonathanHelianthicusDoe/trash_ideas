@@ -63,6 +63,13 @@
         - [maximum of 2 gag tracks at toon creation](#maximum-of-2-gag-tracks-at-toon-creation)
             - [pros](#pros-9)
             - [cons](#cons-9)
+    - [gaining gag tracks](#gaining-gag-tracks)
+        - [lowering the maximum number of gag tracks that a toon can have to 5](#lowering-the-maximum-number-of-gag-tracks-that-a-toon-can-have-to-5)
+            - [pros](#pros-10)
+            - [cons](#cons-10)
+        - [keeping the maximum number of gag tracks that a toon can have at 6](#keeping-the-maximum-number-of-gag-tracks-that-a-toon-can-have-at-6)
+            - [pros](#pros-11)
+            - [cons](#cons-11)
 - [odds &amp; ends](#odds-amp-ends)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
@@ -1861,6 +1868,117 @@ especially because said milestones *would* represent spikes in power.
   of the main taskline, you have only acquired a total of 3 gag tracks.
 - If setting an endgame maximum of 6 gag tracks: Continues to leave the Daisy
   Gardens taskline barren of gag track acquisition.
+
+### gaining gag tracks
+
+In TTO/TTR, every time that you start the main taskline of a playground that
+awards a gag track, you are given a choice between two gag tracks, and must
+choose which one you want to acquire by the end of that playground&rsquo;s
+taskline. In keeping with the logic of the previous section on the subject of
+starting gag tracks, this should be expanded to give the toon a choice between
+all of the gag tracks that they don&rsquo;t already have, plus the additional
+choice of not acquiring a gag track at all.
+
+There is also the possibility of changing how many gag tracks that a toon
+ultimately ends up with after the completion of the main taskline (assuming
+that they always choose to acquire as many gag tracks as they can get). In
+TTO/TTR, this number is 6, which is one less than the total number of gag
+tracks that exist in the game. So, in TTO/TTR, &ldquo;normal&rdquo; builds are
+defined by the single gag track that they are missing (typically
+&ldquo;trapless&rdquo; or &ldquo;dropless&rdquo;). However, the possibility
+exists to reduce (or even increase) this number. Here we only consider two
+possibilities:
+
+- Keeping this number at 6.
+- Lowering this number to 5.
+
+Increasing this number to 7 means that every (non-uber &amp; non-semi,
+henceforth NUNS) toon has every gag, something that already *effectively* feels
+true in TTO/TTR in a way that is problematic and not conducive to creativity
+nor teamwork. Particularly, the total number of possible NUNS builds is reduced
+from 7 to just 1. We also don&rsquo;t consider lowering this number below 5,
+because it quickly starts to hamper the sense of progression through the game,
+and doesn&rsquo;t actually increase the number of possible NUNS builds by as
+much as one would hope.<sup>\[1\]</sup>
+
+At the moment, I am leaning towards a maximum number of starting gag tracks of
+2, paired with a maximum number of ending gag tracks of 6 (that is, similar to
+TTO/TTR). Not only is this basically the least revisionist option, but also the
+option that starts the game in a more flexible and less brutal way (starting
+with a maximum of one track being essentially an invitation for players to
+shoot themselves in the feet). The maximum of 6 ending gag tracks follows from
+the maximum of 2 starting gag tracks, since ending with a maximum of 5 would
+hamper progression too much and require breaking the main taskline very
+seriously.
+
+#### lowering the maximum number of gag tracks that a toon can have to 5
+
+##### pros
+
+- Dramatically increases the total number of possible NUNS builds, from
+  <sub>7</sub>C<sub>6</sub>&nbsp;=&nbsp;7 to
+  <sub>7</sub>C<sub>5</sub>&nbsp;=&nbsp;21. This implies a greater variety of
+  toons, increasing the overall creativity that goes into even NUNS toon
+  creation.
+- Further curtails the feeling of &ldquo;basically every toon has basically
+  every gag&rdquo; that TTO/TTR has, even moreso than just balancing the 7 gag
+  tracks alone. This implies a greater focus on meaningful teamwork &amp;
+  cooperation, as well as more engaging and varied gameplay.
+- If limiting starting gag tracks to a maximum of 1: Allows keeping the main
+  taskline totally intact, since the number of gag tracks acquired between toon
+  creation and completion of the main taskline is still 4.
+- Makes toons weaker overall. This could be a pro.
+
+##### cons
+
+- If limiting starting gag tracks to a maximum of 2: The number of gag tracks
+  acquired between toon creation and completion of the main taskline is now
+  less than it is in TTO/TTR. Another playground (in addition to Daisy Gardens
+  &amp; Donald&rsquo;s Dreamland) will have to be stripped of its gag track
+  taskline. The game&rsquo;s sense of progression is dampened by the lack of
+  gag track advancement.
+- Makes toons weaker overall. This could be a con.
+- This is the more revisionist option, insofar as the maximum number of tracks
+  that a toon can have in TTO/TTR is 6, not 5.
+
+#### keeping the maximum number of gag tracks that a toon can have at 6
+
+##### pros
+
+- If limiting starting gag tracks to a maximum of 2: Does not hamper the
+  game&rsquo;s sense of progression like a final maximum of 5 gag tracks would.
+  Also unlike ending with 5 tracks maximum, this does not break the main
+  taskline; indeed, the original main taskline from TTO/TTR can be preserved.
+- If limiting starting gag tracks to a maximum of 1: The game&rsquo;s sense of
+  progression can even be improved over that of TTO/TTR, since a NUNS toon
+  acquires 5 (rather than 4) gag tracks in between toon creation and completion
+  of the main taskline. Daisy Gardens (or Donald&rsquo;s Dreamland, for that
+  matter) can be fitted with a gag track acquisition taskline.
+- Makes toons stronger overall. This could be a pro.
+
+##### cons
+
+- Dramatically reduces the total number of possible NUNS builds, from
+  <sub>7</sub>C<sub>5</sub>&nbsp;=&nbsp;21 to
+  <sub>7</sub>C<sub>6</sub>&nbsp;=&nbsp;7. This implies a smaller variety of
+  toons, decreasing the overall creativity that goes into NUNS toon creation.
+- Makes toons stronger overall. This could be a con.
+
+---
+
+<details>
+<summary>footnotes for &ldquo;gaining gag tracks&rdquo;</summary>
+
+1. Setting the maximum number of possible gag tracks at 3 or 4 gets you
+   <sub>7</sub>C<sub>4</sub>&nbsp;=&nbsp;<sub>7</sub>C<sub>3</sub>&nbsp;=&nbsp;35
+   possible NUNS builds; not quite as much of an improvement over
+   <sub>7</sub>C<sub>5</sub>&nbsp;=&nbsp;21 as 21 is over
+   <sub>7</sub>C<sub>6</sub>&nbsp;=&nbsp;7. And of course, going below 3
+   possible gag tracks [only gets
+   worse](https://en.wikipedia.org/wiki/Pascal%27s_triangle) (not that you
+   would want to do that anyways).
+
+</details>
 
 ## odds &amp; ends
 
