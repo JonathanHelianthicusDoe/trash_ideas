@@ -70,14 +70,19 @@
         - [keeping the maximum number of gag tracks that a toon can have at 6](#keeping-the-maximum-number-of-gag-tracks-that-a-toon-can-have-at-6)
             - [pros](#pros-11)
             - [cons](#cons-11)
+- [trees](#trees)
 - [odds and ends](#odds-and-ends)
     - [chat and communication](#chat-and-communication)
         - [Speedchat](#speedchat)
-            - [Speedchat l10n](#speedchat-l10n)
-            - [Speedchat search; keyboard controls](#speedchat-search-keyboard-controls)
-            - [Speedchat phrase organization](#speedchat-phrase-organization)
+            - [l10n](#l10n)
+            - [search; keyboard controls](#search-keyboard-controls)
+            - [phrase organization](#phrase-organization)
         - [Speedchat+](#speedchat)
+            - [logging](#logging)
+            - [bowdlerization methods](#bowdlerization-methods)
+            - [message length](#message-length)
         - [non-Speedchat(+) communication](#non-speedchat-communication)
+        - [mutes/ignores](#mutesignores)
     - [toon naming](#toon-naming)
     - [governance](#governance)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
@@ -1989,6 +1994,8 @@ seriously.
 
 </details>
 
+## trees
+
 ## odds and ends
 
 This section is dedicated to other thoughts and proposed changes that have
@@ -2011,7 +2018,7 @@ A method of communication through pre-ordained phrases has a number of
 benefits, but these benefits are watered down &mdash; and sometimes not even
 taken advantage of &mdash; in TTO/TTR.
 
-##### Speedchat l10n
+##### l10n
 
 One of the truly wonderful benefits of communication through pre-ordained
 phrases is that it invites [localization
@@ -2032,7 +2039,7 @@ leaving the Speedchat phrase fully or partially
 
 As far as I know, no versions of Toontown exist that implement this feature.
 
-##### Speedchat search; keyboard controls
+##### search; keyboard controls
 
 If you had never used Speedchat before, and you heard that it functioned via
 pre-ordained phrases, you might think it&rsquo;s a convenience. In some ways,
@@ -2098,7 +2105,7 @@ well as those with conditions that affect [eye&ndash;hand
 coordination](https://en.wikipedia.org/wiki/Eye%E2%80%93hand_coordination)
 (particularly in the elderly).
 
-##### Speedchat phrase organization
+##### phrase organization
 
 It would ideally go without saying that within the context of the traditional
 Speedchat [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface),
@@ -2138,7 +2145,204 @@ location, for example, putting &ldquo;Good luck!&rdquo; in both the
 
 #### Speedchat+
 
+##### logging
+
+One of the great weaknesses of the TTO/TTR Speedchat+ system is the lack of any
+kind of user-facing chat log whatsoever. This is in stark contrast to the
+textual communication systems of essentially every other multiplayer game; in
+TTO/TTR, if you don&rsquo;t see the speech bubble, the message was never sent
+as far as you&rsquo;re concerned. Having an ordinary chat log like every other
+game has long been a requested feature from TTO/TTR players.
+
+Not much needs to be said about the exact implementation of such a chat log, in
+the sense that it is a commonplace technology nowadays and should therefore be
+more straightforward to design. Some nice features might include, among other
+things:
+
+- The ability to easily control how much screen real estate is occupied by the
+  chat log; for example, a way of toggling its visibility, or even a way of
+  resizing it and/or repositioning it.
+- The ability to scroll up and down the log.
+- A [horizontal rule][hr] inserted into the log every time that a change of
+  [map][map] occurs, with any sequence of multiple such rules in a row
+  collapsed into a single rule.
+- The ability to click on a toon&rsquo;s name in the chat log and have it
+  function like clicking on the toon&rsquo;s nametag.
+- Only showing a message-sending toon&rsquo;s name once in the case that they
+  send 1 or more messages in a row; the name need not take up space by being
+  duplicated multiple times in a row.
+- The ability to show or hide message
+  [timestamps](https://en.wikipedia.org/wiki/Timestamp). The
+  [timestamps](https://en.wikipedia.org/wiki/Timestamp) themselves can probably
+  just be in the format `%T`, or `%X` if [locale][locale]-dependence is desired
+  (using [`strftime`](https://en.cppreference.com/w/c/chrono/strftime) syntax),
+  in the user&rsquo;s local [time
+  zone](https://en.wikipedia.org/wiki/Time_zone).
+
+##### bowdlerization methods
+
+Because the purpose of Speedchat+ is to allow more-or-less free-form textual
+input, and Toontown is intentionally designed for persons of [all
+ages](https://en.wikipedia.org/wiki/Family-friendly) (particularly w.r.t.
+[children](https://en.wikipedia.org/wiki/Age_appropriateness)), some form(s) of
+automatic [bowdlerization](https://en.wikipedia.org/wiki/Expurgation) are
+typically employed to [filter out](https://en.wikipedia.org/wiki/Wordfilter)
+unwanted words, or even unwanted phrases. Although such methods of automatic
+[bowdlerization](https://en.wikipedia.org/wiki/Expurgation) are usually useful
+to some degree, their actual effectiveness is dubious, and the particular
+implementations found in the wild are sometimes victims of poor design.
+
+When it comes to effectiveness, even with *very* strict
+[filters](https://en.wikipedia.org/wiki/Wordfilter) (like e.g. that of TTR),
+players still easily and widely find ways to talk about the intentionally
+blocked words/phrases/topics anyways (and, furthermore, the strategies employed
+for this purpose are diverse). This is usually not even the fault of the filter
+being poorly designed or having a narrow purview; this is just a reality of
+purely [automated](https://en.wikipedia.org/wiki/Automation) (that is, no
+actual persons being involved) modes of
+[censorship](https://en.wikipedia.org/wiki/Censorship). This inherent
+limitation should be taken into account when considering how overbearing to
+make a particular [filter](https://en.wikipedia.org/wiki/Wordfilter). While it
+is not true that this inherent limitation implies that all such
+[filters](https://en.wikipedia.org/wiki/Wordfilter) are totally *useless*, it
+does limit how much it makes sense to accept a certain level of [inadvertent
+censorship of ordinary (that is, unproblematic) language][false-positive].
+
+When it comes to the design of these
+[filters](https://en.wikipedia.org/wiki/Wordfilter), there exists a variety of
+strategies, and this document will not go over the various merits and pitfalls
+of each one. Instead, it is illustrative to look at some existing design
+failures. One failure is the mixing of incompatible strategies, like employing
+[blacklisting](https://en.wikipedia.org/wiki/Blacklisting) in addition to
+[whitelisting](https://en.wikipedia.org/wiki/Whitelisting). Such a scheme is
+inherently [confused](https://en.wikipedia.org/wiki/Cognitive_dissonance), and
+serves also to unnecessarily confuse players and create an overbearing filter
+that makes normal speech more error-prone and more of a [challenge][test].
+Neither [blacklisting](https://en.wikipedia.org/wiki/Blacklisting) nor
+[whitelisting](https://en.wikipedia.org/wiki/Whitelisting) are poor strategies
+in and of themselves, but the combination of the two (as well as certain other
+incoherent combinations) should be avoided. Another failure is one of
+[punctuation](https://en.wikipedia.org/wiki/Punctuation); depending on the
+exact implementation (usually implicitly or explicitly relying on [regular
+expressions](https://en.wikipedia.org/wiki/Regular_expression)),
+[punctuation](https://en.wikipedia.org/wiki/Punctuation) is sometimes made more
+difficult to use because of a
+[filter](https://en.wikipedia.org/wiki/Wordfilter), even if the
+[punctuation](https://en.wikipedia.org/wiki/Punctuation) is being [used
+ordinarily](https://en.wikipedia.org/wiki/Orthography). One possible clean way
+of preventing this failure (in
+[English](https://en.wikipedia.org/wiki/English_orthography) and in many other
+languages) is simply ignoring
+[punctuation](https://en.wikipedia.org/wiki/Punctuation) when doing the
+[filtering](https://en.wikipedia.org/wiki/Wordfilter) (counting
+[hyphenation](https://en.wikipedia.org/wiki/Hyphen) as a form of
+[spelling](https://en.wikipedia.org/wiki/Spelling) rather than of
+[punctuation](https://en.wikipedia.org/wiki/Punctuation) when not surrounded by
+[spaces][space]). For example, `They said, "no."` would be
+[filtered](https://en.wikipedia.org/wiki/Wordfilter) identically to
+`They said no` (note that the [space][space] between the
+[comma](https://en.wikipedia.org/wiki/Comma) and the first double [quotation
+mark](https://en.wikipedia.org/wiki/Quotation_mark) is preserved).
+
+The last glaring issue w.r.t. Speedchat+
+[bowdlerization](https://en.wikipedia.org/wiki/Expurgation) methods is concern
+for [localization
+(l10n)](https://en.wikipedia.org/wiki/Internationalization_and_localization).
+In an ideal fantasy world, l10n for Speedchat+ would be just as straightforward
+as Speedchat. Of course, Speedchat+ is much more free-form, so compatibility
+between languages is difficult or impossible. A few options present themselves:
+
+1. Speedchat+ is [monolingual](https://en.wikipedia.org/wiki/Monolingualism).
+   Particularly, this usually means
+   [English](https://en.wikipedia.org/wiki/English_language)-only, both because
+   Toontown originated in [the United
+   States](https://en.wikipedia.org/wiki/United_States) and because
+   [English](https://en.wikipedia.org/wiki/English_language) acts as a kind of
+   <i>de facto</i> global [<i>lingua
+   franca</i>](https://en.wikipedia.org/wiki/Lingua_franca). However, Toontown
+   servers that are based in and/or target regions that are not [primarily
+   English-speaking](https://en.wikipedia.org/wiki/Anglosphere) and would not
+   use English as a [<i>lingua
+   franca</i>](https://en.wikipedia.org/wiki/Lingua_franca) would choose some
+   other language (e.g.
+   [Portuguese](https://en.wikipedia.org/wiki/Portuguese_language) for
+   [Brazil](https://en.wikipedia.org/wiki/Brazil) and other
+   [Lusophonic](https://en.wikipedia.org/wiki/Lusophone) regions).
+2. Speedchat+ for a given user at a given time only allows input from a
+   particular language, namely whatever their current language preference is.
+   Speedchat+ messages then appear to other users untranslated. It behooves
+   such an implementation to allow users to switch their language preference
+   easily and on-the-fly (viz. without having to re-login), to allow
+   [multilingual](https://en.wikipedia.org/wiki/Multilingualism) users to
+   communicate freely. Players should easily be able to view the language
+   preference of other toons, e.g. via their nametags or by clicking on their
+   nametags.
+3. Speedchat+ ignores language preference, but still allows communication in
+   two or more languages (including two or more languages freely mixed within a
+   single message). Players should still easily be able to view the language
+   preference of other toons, e.g. via their nametags or by clicking on their
+   nametags.
+4. Each district in the game is associated with a language. Within each
+   district, Speedchat+ acts like (2.), but as if every player in the district
+   had their language preference forcibly set to whatever the district&rsquo;s
+   language is.
+
+(1.) has the advantage of being the easiest to implement, and of having the
+best chance of [mitigating unwanted
+language](https://en.wikipedia.org/wiki/Expurgation). However, it also is the
+most restrictive and is socially exclusive towards those who do not speak the
+particular language of choice.
+
+(2.) has the advantage of allowing multiple languages and is thus less
+exclusive. The need to switch language preference to speak a different language
+(and thus also the, for the most part, inability to use multiple languages
+within a single message) is clunky, but in exchange, this strategy has a better
+chance of [mitigating unwanted
+language](https://en.wikipedia.org/wiki/Expurgation) than (3.). This also
+requires having a filter for each language, and so takes more implementation
+and maintenance work than (1.).
+
+(3.) has the advantage of allowing multiple languages and is thus less
+exclusive. Being able to freely use various languages is a great boon, but
+comes with the downside of making it more difficult to [mitigate unwanted
+language](https://en.wikipedia.org/wiki/Expurgation) than it is in, say, (2).
+Whether this requires more or less implementation/maintenance effort than (1.)
+depends wildly on the filtering strategy, but in both cases there is just one
+filter (rather than a filter for each language).
+
+(4.) has the advantage of allowing multiple languages, but unfortunately does
+so by walling these language communities off from one another, which is
+probably needlessly divisive, as well as stifling to multilingual users. This
+also does not play nicely with the ordinary use of districts, which are simply
+identical copies of the same world that may be switched between for
+*game-mechanical reasons* (e.g. to find a building). This also takes about as
+much effort as, and has about as much chance of [mitigating unwanted
+language](https://en.wikipedia.org/wiki/Expurgation) as, (2.), since a separate
+filter for each language is needed.
+
+##### message length
+
+Speedchat+ messages are ordinarily restricted to a very short length. This
+hobbles communication to a great extent. It incentivises very abbreviated
+language to the point of being difficult to decipher. It also requires
+splitting thoughts and sentences across multiple messages, which leads to
+unnecessary interruption/incoherence, and forces listeners to wait for later
+installments of the same sentence or thought and then piece them together.
+Obviously, some reasonably short limit needs to be put on the length of
+Speedchat+ messages, but there is no reason they cannot have a much larger
+limit than they do in TTO/TTR in order to allow fluid communication.
+
+Also, in TTO/TTR, Speedchat+ message &ldquo;length&rdquo; is determined in a
+rather obscure way that doesn&rsquo;t correspond well to the actual textual
+content. Better is to simply judge length on the basis of [extended grapheme
+clusters, grapheme clusters](https://unicode.org/reports/tr29/),
+[codepoints](https://en.wikipedia.org/wiki/Code_point), or even the number of
+[bytes](https://en.wikipedia.org/wiki/Byte) in the
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding of the text.
+
 #### non-Speedchat(+) communication
+
+#### mutes/ignores
 
 ### toon naming
 
@@ -2362,3 +2566,9 @@ See the section on balancing lure mechanically for a possible solution.
 [discord]: https://en.wikipedia.org/wiki/Discord_(software)
 [slack]: https://en.wikipedia.org/wiki/Slack_(software)
 [unacceptable]: https://web.archive.org/web/20200405025055/https://sneak.berlin/20200220/discord-is-not-an-acceptable-choice-for-free-software-projects/
+[hr]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+[map]: https://en.wikipedia.org/wiki/Map_(video_games)
+[locale]: https://en.wikipedia.org/wiki/Locale_(computer_software)
+[false-positive]: https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_positive_error
+[test]: https://en.wikipedia.org/wiki/Test_(assessment)
+[space]: https://en.wikipedia.org/wiki/Space_(punctuation)
