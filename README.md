@@ -70,7 +70,16 @@
         - [keeping the maximum number of gag tracks that a toon can have at 6](#keeping-the-maximum-number-of-gag-tracks-that-a-toon-can-have-at-6)
             - [pros](#pros-11)
             - [cons](#cons-11)
-- [odds &amp; ends](#odds-amp-ends)
+- [odds and ends](#odds-and-ends)
+    - [chat and communication](#chat-and-communication)
+        - [Speedchat](#speedchat)
+            - [Speedchat l10n](#speedchat-l10n)
+            - [Speedchat search; keyboard controls](#speedchat-search-keyboard-controls)
+            - [Speedchat phrase organization](#speedchat-phrase-organization)
+        - [Speedchat+](#speedchat)
+        - [non-Speedchat(+) communication](#non-speedchat-communication)
+    - [toon naming](#toon-naming)
+    - [governance](#governance)
 - [appendix (a.k.a. random garbage)](#appendix-aka-random-garbage)
     - [why is lure kind of broken no matter how much you nerf and/or buff it?](#why-is-lure-kind-of-broken-no-matter-how-much-you-nerf-andor-buff-it)
 
@@ -1980,10 +1989,208 @@ seriously.
 
 </details>
 
-## odds &amp; ends
+## odds and ends
 
 This section is dedicated to other thoughts and proposed changes that have
 little or nothing to do with the core *mechanics* of the game.
+
+### chat and communication
+
+It could safely be said that TTO/TTR had/has some of the more poorly-designed
+player communication systems seen in any
+[MMO](https://en.wikipedia.org/wiki/Massively_multiplayer_online_game). This
+fact achieves nearly comical levels of irony, considering that Toontown is a
+game prided on its focus towards teamwork and friendship. There is a variety of
+factors making communication less-than-optimal and even less-than-useful within
+TTO/TTR that are addressed here.
+
+#### Speedchat
+
+Speedchat is actually one of the strengths of the TTO/TTR communication system.
+A method of communication through pre-ordained phrases has a number of
+benefits, but these benefits are watered down &mdash; and sometimes not even
+taken advantage of &mdash; in TTO/TTR.
+
+##### Speedchat l10n
+
+One of the truly wonderful benefits of communication through pre-ordained
+phrases is that it invites [localization
+(l10n)](https://en.wikipedia.org/wiki/Internationalization_and_localization).
+Players can set their language preferences locally, and all Speedchat-related
+text (including Speedchat phrases uttered by other players) then appear to the
+player in their preferred language. Of course, this involves all the messiness
+and difficulty of [natural language
+translation](https://en.wikipedia.org/wiki/Translation), but certainly nothing
+extraordinary that hasn&rsquo;t been tackled before. [Idiomatic
+phrases](https://en.wikipedia.org/wiki/Idiom) in particular pose a challenge,
+but this is generally solved by either [sense-for-sense
+translation](https://en.wikipedia.org/wiki/Sense-for-sense_translation)
+(possibly, in certain cases, even substituting in an analogous [idiomatic
+phrase](https://en.wikipedia.org/wiki/Idiom) in the target language) or even
+leaving the Speedchat phrase fully or partially
+[untranslated](https://en.wikipedia.org/wiki/Loanword).
+
+As far as I know, no versions of Toontown exist that implement this feature.
+
+##### Speedchat search; keyboard controls
+
+If you had never used Speedchat before, and you heard that it functioned via
+pre-ordained phrases, you might think it&rsquo;s a convenience. In some ways,
+it is, but as soon as you first attempt to navigate the hellish gauntlet of
+super-human dexterity, patience, and recall that is the Speedchat interface,
+you might be disappointed. The
+[GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) provided by
+Speedchat is consistently frustrating to use for everything but the most easily
+accessed phrases, makes certain phrases nigh impossible to utter at all,
+*requires* the exclusive use of [the
+mouse](https://en.wikipedia.org/wiki/Computer_mouse) (or other [pointing
+device](https://en.wikipedia.org/wiki/Pointing_device)) to the exclusion of
+[keyboards](https://en.wikipedia.org/wiki/Computer_keyboard), and requires the
+user to remember and repeatedly navigate a jumbled hierarchy of phrases.
+
+As a result, it is in no way difficult to imagine a better Speedchat interface.
+A good start that avoids the pitfalls of Speedchat as it exists in TTO/TTR is
+to allow users to [bind](https://en.wikipedia.org/wiki/Keyboard_shortcut) a
+&ldquo;Speedchat key&rdquo; to some arbitrary key on their keyboard, and then
+initiate a [fuzzy string
+search](https://en.wikipedia.org/wiki/Approximate_string_matching) over the set
+of Speedchat phrases when the user starts typing. The user can then press
+[<kbd>Enter</kbd>/<kbd>Return</kbd>](https://en.wikipedia.org/wiki/Enter_key)
+to confirm the closest match and thus utter the phrase and leave the
+&ldquo;Speedchat mode&rdquo;, or even use [arrow
+keys](https://en.wikipedia.org/wiki/Arrow_keys) after having typed a non[empty
+string](https://en.wikipedia.org/wiki/Empty_string) to select from the top `n`
+matches. An extension to this would allow [arrow
+key](https://en.wikipedia.org/wiki/Arrow_keys) navigation when the user has
+only typed the [empty string](https://en.wikipedia.org/wiki/Empty_string)
+(either by not having typed anything yet, or through the use of
+[<kbd>Backspace</kbd>](https://en.wikipedia.org/wiki/Backspace)); in this
+context, [arrow key](https://en.wikipedia.org/wiki/Arrow_keys) navigation would
+allow selection from the previous `n` Speedchat phrases uttered by that player.
+The old interface could stay; instead of being used via the
+[keyboard](https://en.wikipedia.org/wiki/Computer_keyboard), you would have to
+click on the Speedchat icon as normal.
+
+You can even go further and allow players to
+[bind](https://en.wikipedia.org/wiki/Keyboard_shortcut) arbitrary Speedchat
+phrases to arbitrary [key](https://en.wikipedia.org/wiki/Push-button)
+combinations.
+
+It should be noted that the [accessibility
+(a11y)](https://en.wikipedia.org/wiki/Computer_accessibility) of these kinds of
+things improves significantly once you allow the choice between [pointing
+device](https://en.wikipedia.org/wiki/Pointing_device) and
+[keyboard](https://en.wikipedia.org/wiki/Computer_keyboard). [Pointing
+devices](https://en.wikipedia.org/wiki/Pointing_device) are inherently clumsy
+because they are designed specifically for
+[tracking](https://en.wikipedia.org/wiki/Eye%E2%80%93hand_coordination) motions
+in [two-dimensional
+space](https://en.wikipedia.org/wiki/Two-dimensional_space);
+[keyboards](https://en.wikipedia.org/wiki/Computer_keyboard), by contrast, only
+deal in discrete events that can easily be mapped to various devices (some of
+which may not even feature
+[push-buttons](https://en.wikipedia.org/wiki/Push-button) as a primary
+interface). The current Speedchat interface may be difficult or impossible to
+use for those with [motor](https://en.wikipedia.org/wiki/Muscle) impairments
+like [paralysis](https://en.wikipedia.org/wiki/Paralysis), various
+[RSIs](https://en.wikipedia.org/wiki/Repetitive_strain_injury), &amp;c., as
+well as those with conditions that affect [eye&ndash;hand
+coordination](https://en.wikipedia.org/wiki/Eye%E2%80%93hand_coordination)
+(particularly in the elderly).
+
+##### Speedchat phrase organization
+
+It would ideally go without saying that within the context of the traditional
+Speedchat [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface),
+phrases should be in a fixed configuration (same hierarchy, and same order
+within each list), with the obvious exception of adding or removing phrases.
+And, in addition, phrases that are more closely thematically/semantically
+related should be closer together, as a general rule. Unfortunately, Speedchat
+systems like the one in TTR violate these principles.
+
+A Speedchat &ldquo;feature&rdquo; that attempts to mitigate the
+[automation](https://en.wikipedia.org/wiki/Automation) of doodle training by
+randomizing the order of the Speedchat phrases in the &ldquo;Pets&rdquo;
+category violates the first principle here, compounding the confusion and
+difficulty already associated with Speedchat. While this is presumably
+justified in the context of mitigating said
+[automation](https://en.wikipedia.org/wiki/Automation), this justification is
+weak at best, since the underlying problem (players regularly desiring the use
+of [automation](https://en.wikipedia.org/wiki/Automation) for something that is
+*supposed* to be an enjoyable game) lies with doodle mechanics and not with the
+ease of [automation](https://en.wikipedia.org/wiki/Automation) of Speedchat
+(something that often inevitably comes alongside good
+[a11y](https://en.wikipedia.org/wiki/Computer_accessibility), anyways). In any
+case, a very naïve mitigation such as this one is easily bypassed in countless
+ways, including, but not limited to:
+[OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) (even of the
+most rudimentary kind, since the text will always be pixel-for-pixel the same),
+[sniffing the process&rsquo;s memory](https://en.wikipedia.org/wiki/Ptrace),
+compiling a custom client [binary](https://en.wikipedia.org/wiki/Executable),
+&amp;c.
+
+Phrases that are thematically/semantically closely related, e.g. nearly
+equivalent phrases like &ldquo;No problem.&rdquo;, &ldquo;You&rsquo;re
+welcome!&rdquo;, and &ldquo;Any time!&rdquo;, should be adjacent. It is
+acceptable (and sometimes desirable) to have the same phrase in more than one
+location, for example, putting &ldquo;Good luck!&rdquo; in both the
+&ldquo;Goodbye&rdquo; and &ldquo;Friendly&rdquo; sections.
+
+#### Speedchat+
+
+#### non-Speedchat(+) communication
+
+### toon naming
+
+### governance
+
+If things like toon names and Speedchat are too removed from the actual
+&ldquo;mechanics&rdquo; of the game <i>per se</i> to have a place in this
+document outside of this &ldquo;odds and ends&rdquo; section, then governance
+of the game is a whole new level of unrelatedness.
+
+Nevertheless, for what it&rsquo;s worth, in light of how essentially every
+Toontown private server is currently being run at the time of this writing,
+here are just a few quick points. I won&rsquo;t attempt to justify any of these
+points, as that would be more than is warranted for something that is this
+off-topic, and the justifications should hopefully be quite obvious anyways:
+
+- The game should be [open
+  source](https://en.wikipedia.org/wiki/Free_software): the code comprising the
+  server, and especially that comprising the client, should be publicly
+  available and licensed under the terms of some [free software
+  license](https://en.wikipedia.org/wiki/Free_software_license).
+- The development of the game should be done publicly, that is, transparently,
+  rather than internally/privately. This includes, among other things, public
+  [distributed version
+  control](https://en.wikipedia.org/wiki/Distributed_version_control), a
+  public pull request system, a public [bug/issue
+  tracker](https://en.wikipedia.org/wiki/Issue_tracking_system), &amp;c.
+- The administration of the game should be done publicly, that is,
+  transparently, rather than internally/privately. This implies some relatively
+  &ldquo;open&rdquo; form of governance over the game &mdash; one that keeps
+  public anything that can reasonably be public (i.e. transparency) and
+  encourages end-user participation, contributions, and discussions. This means
+  &ldquo;open&rdquo; in the relevant *ordinary* sense, *not necessarily*
+  so-called &ldquo;[open(-source)
+  governance](https://en.wikipedia.org/wiki/Open-source_governance)&rdquo;,
+  which is a much more robust concept that itself takes on countless different
+  forms. In effect, the differences between &ldquo;staff member&rdquo; and
+  &ldquo;end-user&rdquo; should be minimized, and the process of staff
+  recruitment &mdash; and analogously, attrition &mdash; should be
+  public/transparent.
+- The primary communication channel(s) used for the game (outside of the game
+  proper) should be, as much as is possible/practical,
+  [free](https://en.wikipedia.org/wiki/Free_software) (as in, [free
+  software](https://en.wikipedia.org/wiki/Free_software)) and
+  [decentralized][decentralization] (as in [the
+  internet](https://en.wikipedia.org/wiki/Internet)). Effectively, this means
+  completely avoiding the use of [Discord&trade;][discord] and other similar
+  centralized and proprietary services like e.g. [Slack&trade;][slack]. See
+  &ldquo;[Discord Is Not An Acceptable Choice For Free Software
+  Projects][unacceptable]&rdquo; for clear reasoning on this topic (which also
+  applies to many other things besides [Discord&trade;][discord] and besides
+  [free software](https://en.wikipedia.org/wiki/Free_software) projects).
 
 ## appendix (a.k.a. random garbage)
 
@@ -2151,3 +2358,7 @@ See the section on balancing lure mechanically for a possible solution.
 [on-sbfos]: https://gist.github.com/JonathanHelianthicusDoe/e5a261941bfa0f29148a6999b6ca7a65
 [sawtooth]: https://en.wikipedia.org/wiki/Sawtooth_(wave)
 [proportional]: https://en.wikipedia.org/wiki/Proportionality_(mathematics)
+[decentralization]: https://en.wikipedia.org/wiki/Decentralized_information_technology#Technological_decentralization
+[discord]: https://en.wikipedia.org/wiki/Discord_(software)
+[slack]: https://en.wikipedia.org/wiki/Slack_(software)
+[unacceptable]: https://web.archive.org/web/20200405025055/https://sneak.berlin/20200220/discord-is-not-an-acceptable-choice-for-free-software-projects/
